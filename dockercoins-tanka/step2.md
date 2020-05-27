@@ -4,9 +4,9 @@
 
 ## Check the deployment
 
-`kubectl get pods -n dockercoins`{{execute}} -w
+`watch "kubectl get pods -n dockercoins"`{{execute}}
 
-Hit `Ctrl-C`when all the pod are in ready state
+Hit `Ctrl-C`when all the pods are in ready state
 
 ## Acecss to the webui
 
