@@ -2,7 +2,7 @@
 
 Wait ...
 
-For the long init script wait for the message `ready to go !!!`
+For the long init script wait for the message `done`
 
 ## Parameters to set
 
