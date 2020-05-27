@@ -4,15 +4,15 @@
 
 ## Check the deployment
 
-`kubectl get pods -n dockercoins`{{execute}}
+`kubectl get pods -n dockercoins`{{execute}} -w
 
-Wait all pods to reach ready state
+Hit `Ctrl-C`when all the pod are in ready state
 
 ## Acecss to the webui
 
-copy paste the output in a browser
+Copy/Paste the output in a browser the output of this command
 
-`echo [[HOST_SUBDOMAIN]]-$(kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services webui -n dockercoins)-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+`echo ' '; echo [[HOST_SUBDOMAIN]]-$(kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services webui -n dockercoins)-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
 ## test other environments
 

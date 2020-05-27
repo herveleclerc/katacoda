@@ -16,7 +16,8 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "env-init.sh"
+      "courseData": "background.sh",
+      "code": "foreground.sh"
     },
     "finish": {
       "text": "finish.md"
@@ -31,7 +32,8 @@
         { "file": "qa/main.jsonnet.tpl", "target": "~/templates/qa" },
         { "file": "prod/main.jsonnet.tpl", "target": "~/templates/prod" },
         { "file": "tasks/Taskfile.yml", "target": "~/" },
-        { "file": "tasks/Taskvars.yml", "target": "~/" }
+        { "file": "tasks/Taskvars.yml", "target": "~/" },
+        { "file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x" }
       ]
     }
   },
