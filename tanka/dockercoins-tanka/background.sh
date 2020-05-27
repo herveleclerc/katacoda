@@ -16,7 +16,7 @@ curl -Ls -o "$HOME/go/bin/tk" https://github.com/grafana/tanka/releases/download
 chmod a+rx "$HOME/go/bin/tk"
 
 echo "jsonnet"
-pip install jsonnet
+go get github.com/google/go-jsonnet/cmd/jsonnet
 
 echo "Installing packages"
 echo "Sponge"

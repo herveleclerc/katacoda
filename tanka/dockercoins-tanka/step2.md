@@ -24,7 +24,7 @@ After a while you should see something like this
 
 To see the difference between current running version an QA
 
-`tk diff $HOME/dockercoins/environments/qa`
+`tk diff $HOME/dockercoins/environments/qa`{{execute}}
 
 in green you will see the differences :
 
@@ -39,6 +39,10 @@ or if you prefer use `tk`command
 - `tk apply $HOME/dockercoins/environments/qa`{{execute}}
 
 **To deploy the PROD env**
+
+To see the difference between current running version an QA
+
+`tk diff $HOME/dockercoins/environments/prod`{{execute}}
 
 - `ENV=prod task deploy`{{execute}} will deploy PROD environment
 
