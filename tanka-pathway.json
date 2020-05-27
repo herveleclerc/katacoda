@@ -1,0 +1,11 @@
+{
+  "title": "Alter way Hosting Course",
+  "description": "Training awh",
+  "courses": [
+    {
+      "course_id": "dockercoins-tanka",
+      "title": "Learn to use tanka",
+      "description": "tanka is a composable configuration utility for kubernetes"
+    }
+  ]
+}
