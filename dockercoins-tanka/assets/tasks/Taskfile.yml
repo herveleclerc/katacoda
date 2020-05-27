@@ -1,0 +1,133 @@
+version: "2"
+
+vars:
+  PROJECT_NAME: "{{.project_name}}"
+  DEFAULT_SPEC: "{{.PROJECT_NAME}}/environments/default/spec.json"
+  DEFAULT_MAIN: "{{.PROJECT_NAME}}/environments/default/main.jsonnet"
+
+env:
+  PROJECT_NAME: "{{.project_name}}"
+  NAMESPACE: "{{.namespace}}"
+
+tasks:
+  default:
+    silent: true
+    desc: "Setup project environment and deploy dev environment"
+    cmds:
+      - task: all
+
+  clean:
+    silent: true
+    desc: "Clean project (remove directory project)"
+    cmds:
+      - rm -rf {{.PROJECT_NAME}}
+
+  all:
+    silent: true
+    desc: "Setup project environment and deploy dev environment"
+    cmds:
+      - task: clean
+      - task: init-tk
+      - task: vscode-setup
+      - task: setup-default
+      - task: spec-default
+      - task: setup-environment
+        vars:
+          {
+            ENVIRONMENT: "dev",
+            MAIN_JSONNET: "{{.PROJECT_NAME}}/environments/dev/main.jsonnet",
+            API_SERVER: "{{.apiServer}}",
+          }
+      - task: setup-environment
+        vars:
+          {
+            ENVIRONMENT: "qa",
+            MAIN_JSONNET: "{{.PROJECT_NAME}}/environments/qa/main.jsonnet",
+            API_SERVER: "{{.apiServerQa}}",
+          }
+      - task: setup-environment
+        vars:
+          {
+            ENVIRONMENT: "prod",
+            MAIN_JSONNET: "{{.PROJECT_NAME}}/environments/prod/main.jsonnet",
+            API_SERVER: "{{.apiServerProd}}",
+          }
+      - task: deploy
+        vars: { ENV: "dev" }
+
+  init-tk:
+    silent: true
+    desc: "Init project with tk"
+    cmds:
+      - cmd: mkdir -p {{.PROJECT_NAME}}
+      - cmd: cd {{.PROJECT_NAME}} && tk init
+
+  vscode-setup:
+    silent: true
+    desc: "Create vscode settings"
+    cmds:
+      - mkdir -p {{.PROJECT_NAME}}/.vscode
+      - |
+        cat << EOF > {{.PROJECT_NAME}}/.vscode/settings.json
+        {
+        "jsonnet.libPaths": [
+        "$PWD/{{.PROJECT_NAME}}/vendor/github.com/grafana/jsonnet-libs",
+        "$PWD/{{.PROJECT_NAME}}/vendor/github.com/ksonnet/ksonnet-lib",
+        "$PWD/{{.PROJECT_NAME}}/lib"
+        ]
+        }
+        EOF
+
+  setup-default:
+    silent: true
+    desc: "Create jsonnet environment"
+    cmds:
+      - mkdir -p {{.PROJECT_NAME}}/lib/{{.PROJECT_NAME}}
+      - envsubst < templates/config.libsonnet.tpl > {{.PROJECT_NAME}}/lib/{{.PROJECT_NAME}}/config.libsonnet
+      - envsubst < templates/project.libsonnet.tpl > {{.PROJECT_NAME}}/lib/{{.PROJECT_NAME}}//{{.PROJECT_NAME}}.libsonnet
+      - envsubst < templates/default/main.jsonnet.tpl > {{.DEFAULT_MAIN}}
+
+  spec-default:
+    silent: true
+    desc: "Adapt default spec.json"
+    cmds:
+      - cat {{.DEFAULT_SPEC}}|jq '.metadata.name = "{{.PROJECT_NAME}}"'|sponge {{.DEFAULT_SPEC}}
+      - cat {{.DEFAULT_SPEC}}|jq '.spec.namespace = "{{.namespace}}"'|sponge {{.DEFAULT_SPEC}}
+      - cat {{.DEFAULT_SPEC}}|jq '.spec.apiServer = "{{.apiServer}}"'|sponge {{.DEFAULT_SPEC}}
+
+  tk-show:
+    silent: true
+    desc: "Show the project environment"
+    dir: "{{.PROJECT_NAME}}"
+    cmds:
+      - tk show --dangerous-allow-redirect environments/{{.ENV}}
+    preconditions:
+      - sh: '[[ "{{.ENV}}" != "<no value>" ]]'
+        msg: "Please give an ENV value (for eg. ENV=prod task deploy)"
+
+  setup-environment:
+    silent: true
+    desc: "Create {{.ENVIRONMENT}} environment for the project"
+    cmds:
+      - cd {{.PROJECT_NAME}} && tk env add environments/{{.ENVIRONMENT}} --namespace={{.PROJECT_NAME}} --server "{{.API_SERVER}}"
+      - envsubst < templates/{{.ENVIRONMENT}}/main.jsonnet.tpl > {{.MAIN_JSONNET}}
+
+  deploy:
+    silent: true
+    desc: "Deploy the project regarding ENV"
+    dir: "{{.PROJECT_NAME}}"
+    cmds:
+      - tk apply --dangerous-auto-approve environments/{{.ENV}}
+    preconditions:
+      - sh: '[[ "{{.ENV}}" != "<no value>" ]]'
+        msg: "Please give an ENV value (for eg. ENV=prod task deploy)"
+
+  export:
+    silent: true
+    desc: "export project in yaml regarding ENV"
+    cmds:
+      - cmd: mkdir -p {{.PROJECT_NAME}}/export/{{.ENV}}
+      - cmd: cd {{.PROJECT_NAME}} && tk export environments/{{.ENV}} export/{{.ENV}}
+    preconditions:
+      - sh: '[[ "{{.ENV}}" != "<no value>" ]]'
+        msg: "Please give an ENV value (for eg. ENV=prod task deploy)"

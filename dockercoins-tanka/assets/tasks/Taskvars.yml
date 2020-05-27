@@ -1,0 +1,5 @@
+project_name: "dockercoins"
+namespace: "dockercoins"
+apiServer: "https://172.17.0.31:6443"
+apiServerQa: "https://172.17.0.31:6443"
+apiServerProd: "https://172.17.0.31:6443"
