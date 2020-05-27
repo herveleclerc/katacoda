@@ -2,7 +2,7 @@
   "title": "Deploy Application with tanka",
   "description": "Deploy Application with tanka from grafana labs",
   "difficulty": "Intermediate",
-  "time": "10",
+  "time": "5",
   "details": {
     "steps": [
       {
@@ -24,7 +24,7 @@
     "assets": {
       "host01": [
         { "file": "lib/config.libsonnet.tpl", "target": "~/templates" },
-        { "file": "lib/jsonnetfile.json", "target": "~/temlates" },
+        { "file": "lib/jsonnetfile.json", "target": "~/templates" },
         { "file": "lib/project.libsonnet.tpl", "target": "~/templates" },
         { "file": "default/main.jsonnet.tpl", "target": "~/templates/default" },
         { "file": "dev/main.jsonnet.tpl", "target": "~/templates/dev" },
@@ -36,7 +36,7 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "kubernetes"

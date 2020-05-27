@@ -1,4 +1,6 @@
-## Wait ...
+---
+
+Wait ...
 
 For the long init script wait for the message `ready to go !!!`
 
@@ -18,4 +20,6 @@ or if you can't vi ;)
 
 `nano Taskvars.yml`{{execute}}
 
-- project name must not contains white `space` or `$`
+or if you are really leazy
+
+- Project name must not contains white `space` or `$`
