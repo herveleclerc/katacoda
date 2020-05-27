@@ -13,4 +13,4 @@ This is why i've tried tanka from Grafana.
 
 Tanka leverages the Jsonnet language to realize flexible, reusable and concise configuration.
 
-version 0.2.3
+version 0.2.4
