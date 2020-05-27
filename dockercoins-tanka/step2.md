@@ -18,7 +18,7 @@ It could take time before mining start because it'is a very small kubernetes clu
 
 After a while you should see something like this
 
-![dev](./assets/images/dev.png)
+![dev](./assets/dev.png)
 
 ## Test other environments
 
@@ -48,7 +48,7 @@ or
 
 After a while you should see something like this after refreshing browser window
 
-![prod](./assets/images/prod.png)
+![prod](./assets/prod.png)
 
 Notice the number of hashes et the fonts of ui
 
