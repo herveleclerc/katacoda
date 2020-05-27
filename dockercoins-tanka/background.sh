@@ -1,6 +1,8 @@
 #!/bin/bash
 
- /root/katacoda-background-finished
+sleep 15
+
+echo "done" >> /root/katacoda-finished
 
 echo "tasks"
 curl -sL https://taskfile.dev/install.sh -o install.sh
