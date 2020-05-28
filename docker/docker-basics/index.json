@@ -1,13 +1,26 @@
 {
     "title": "Prise en main de docker",
-    "description": "Voir les principales commandes Docker pour gérer les images et conteneurs",
+    "description": "Apprendre les principales commandes Docker pour gérer les images et conteneurs",
     "difficulty": "beginner",
     "time": "10-15 minutes",
     "details": {
         "steps": [
             {
-                "title": "Step 1 - Connaître la  version du client et du serveur Docker",
+                "title": "Etape 1 - Connaître la version du client et du serveur Docker",
                 "text": "step1.md"
+            },
+            {
+                "title": "Etape 2 - Rechercher des images",
+                "text": "step2.md",
+                "code": "step2-code.sh",
+                "answer": "step2-answer.md"
+            },
+            {
+                "title": "Etape 3 - Lancer un conteneur",
+                "text": "step3.md",
+                "code": "step3-code.sh",
+                "answer": "step3-answer.md",
+                "verify": "step3-verify.sh"
             }
         ],
         "intro": {

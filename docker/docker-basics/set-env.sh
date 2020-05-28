@@ -1,1 +1,1 @@
-export PS1="(tuto aw):"
+echo "Hello!"

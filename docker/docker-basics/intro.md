@@ -1,4 +1,4 @@
-Un peu d'histoire sur les conteneurs et Docker
+## Un peu d'histoire sur les conteneurs et Docker
 
 ### Premières expérimentations
 
@@ -52,7 +52,7 @@ Au fait:
   - Fournit l'infrastructure pour le projet
   - Maintient et fait tourner le Docker Hub.
 - Siège basé à San Francisco.
-- > 150M capital.
+- \>150M capital.
 
 ---
 
