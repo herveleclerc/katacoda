@@ -1,0 +1,16 @@
+{
+  "title": "alter way Docker Course",
+  "description": "Training Docker",
+  "courses": [
+    {
+      "course_id": "docker-basics",
+      "title": "Learn to use docker",
+      "description": "Docker fundamental courses"
+    },
+    {
+      "course_id": "docker-advanced",
+      "title": "Learn to use docker like a pro",
+      "description": "Docker advanced courses"
+    }
+  ]
+}
