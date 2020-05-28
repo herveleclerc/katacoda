@@ -10,9 +10,9 @@ Hit `Ctrl-C`when all the pods are in ready state
 
 ## Acecss to the webui
 
-Copy/Paste the output in a browser the output of this command
+Copy/Paste in a browser the output of this command
 
-`echo ' '; echo [[HOST_SUBDOMAIN]]-$(kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services webui -n dockercoins)-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+`echo ' '; echo https://[[HOST_SUBDOMAIN]]-$(kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services webui -n dockercoins)-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
 It could take time before mining start because it'is a very small kubernetes cluster (minikube)
 
