@@ -6,6 +6,11 @@
       "course_id": "dockercoins-tanka",
       "title": "Learn to use tanka",
       "description": "tanka is a composable configuration utility for kubernetes"
+    },
+    {
+      "course_id": "kubernetes-101",
+      "title": "Learn to use kubernetes",
+      "description": "First steps with kubernetes"
     }
   ]
 }

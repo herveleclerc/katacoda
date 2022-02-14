@@ -1,15 +1,15 @@
-  
-## doker search
+## docker search
 
-Il est fort possible que quelqu’un a eu les mêmes besoin que vous et ai mis à disposition son travail dans le hub de Docker. 
+Il est fort possible que quelqu’un a eu les mêmes besoin que vous et ai mis à disposition son travail dans le hub de Docker.
 
 Pour cela nous allons utiliser la commande **search** de Docker
 
 ### version Docker jusqu'à 1.10
+
 ```
 usage:  docker search [OPTIONS] TERM
 
-Search the Docker Hub for images 
+Search the Docker Hub for images
 
   --automated        Only show automated builds
 
@@ -21,9 +21,7 @@ Search the Docker Hub for images
 
 ```
 
-
 ### version Docker à partir de 1.11
-
 
 ```
 
@@ -40,14 +38,8 @@ Options possibles :
 Par exemple recherchons toutes les images officielles :
 ```
 
-
-`
-docker search nginx
-`{{execute}}
-
+`docker search nginx`{{execute}}
 
 TP :
 
-Chercher les images **tutum/hello-world** ayant 3 étoiles et ayant un build automatique  :
-
-
+Chercher les images **tutum/hello-world** ayant 3 étoiles et ayant un build automatique :
