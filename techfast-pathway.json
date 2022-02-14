@@ -11,6 +11,11 @@
       "course_id": "kubernetes-101",
       "title": "Learn to use kubernetes",
       "description": "First steps with kubernetes"
+    },
+    {
+      "course_id": "kubernetes-migration",
+      "title": "from 1.18 to 1.20",
+      "description": "Learn how to migrate from 1.18 to 1.20"
     }
   ]
 }
