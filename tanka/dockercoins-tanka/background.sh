@@ -5,8 +5,7 @@ sleep 15
 echo "done" >> /root/katacoda-finished
 
 echo "tasks"
-curl -sL https://taskfile.dev/install.sh -o install.sh
-bash install.sh
+sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d
 
 echo "jb"
 GO111MODULE="on" go get github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb
