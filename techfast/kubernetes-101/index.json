@@ -1,6 +1,6 @@
 {
-  "title": "Kubernetes 1.20 Env Playground",
-  "description": "Kubernetes 1.20 Env Playground",
+  "title": "Kubernetes 1.21 Env Playground",
+  "description": "Kubernetes 1.21 Env Playground",
   "difficulty": "Beginner",
   "details": {
     "steps": [
@@ -31,6 +31,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes-cluster-running:1.18"
+    "imageid": "kubernetes-cluster-running:latest"
   }
 }

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sleep 15 && /usr/bin/setup.sh
+sleep 5 && /usr/bin/setup.sh
