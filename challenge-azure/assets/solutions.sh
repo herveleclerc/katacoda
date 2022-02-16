@@ -6,7 +6,7 @@
 
 function solve_task_1() {
   curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-  az --version > cowsay.txt
+  az --version > az.txt
 }
 
 

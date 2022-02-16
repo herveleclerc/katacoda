@@ -13,7 +13,7 @@ export VERIFY_TIMEOUT=3s
 
 
 function verify_task_1() {
-  dpkg-query -l | grep az
+  dpkg-query -l | grep azure-cli
   if [[ $? -ne 0 ]]
   then 
     return 1
