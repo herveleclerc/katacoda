@@ -6,7 +6,7 @@
 
 function solve_task_1() {
   yes | sudo apt update
-  yes | sudo apt-get install cowsay
+  yes | sudo apt-get install cowsay figlet
   cowsay "O'Reilly, inspiring the future for more than 40 years" > cowsay.txt
 }
 
