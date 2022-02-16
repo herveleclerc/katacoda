@@ -1,15 +1,7 @@
-# An Example Challenge
+# An azure challenge to learn azure core concepts
 
-This challenge walks a learner through a few simple Linux challenges.
-
-## About Challenges
-
-This is an example [challenge](https://www.katacoda.community/challenges/challenges.html) that shows to integrate the _solver_ tool. The _solver_ tool helps authors create high-quality challenges.
-
-The usage of _solver_ for O'Reilly challenge authors is detailed in the [Katacoda Documentation](https://www.katacoda.community/challenges/challenges-solver.html).
+This challenge will help you learn the core concepts of azure
 
 ## About This Challenge
 
-This is an example challenge that helps authors see how to create a complete challenge that utilizes the _solver_ tool. This can be used as a skeleton archetype to create your own challenge.
-
-(If you are adopting this challenge as a canonical example, then add information here in this README about your challenge.)
+If you have any questions about this challenge, please contact herve.leclerc@alterway.fr
