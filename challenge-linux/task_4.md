@@ -1,3 +1,21 @@
-The [xargs](https://man7.org/linux/man-pages/man1/xargs.1.html) command is powerful in Linux. Given the set of "1 2 3 4 5", with just one line add the string "I am [n]" to each file [n].txt. For instance file `2.txt` should contain a single line with "I am 2", file `5.txt` will contain "I am 5". This challenge needs to see your command, so place it in the provided script file `my-xargs.sh`.
+Azure Virtual Network (VNet) is the fundamental building block for your private network in Azure. VNet enables many types of Azure resources, such as Azure Virtual Machines (VM), to securely communicate with each other, the internet, and on-premises networks. VNet is similar to a traditional network that you'd operate in your own data center, but brings with it additional benefits of Azure's infrastructure such as scale, availability, and isolation.
 
-💡 Tip: do not use a `for` or `while` loop, just xargs.
+
+more information here [virtual-network](https://docs.microsoft.com/en-us/azure/virtual-network)
+
+
+In this task you must create a Vnet in Azure with the following properties:
+
+- name: `my-vnet`
+- resource group: `my-resource-group`
+- Vnet address space: `10.0.0.0/16`
+- First subnet name: `my-subnet-1`
+- Subnet address space: `10.0.0.0/24`
+
+
+Once the vnet is created, get the ID of the Vnet and output it to a file named `az-vnet.txt`. 
+
+💡 Tip: You can use the `--query` parameter to get the ID of the Vnet. or `awk` to get the ID of the Vnet.
+
+
+

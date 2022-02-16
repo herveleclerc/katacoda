@@ -6,4 +6,6 @@ In this task you must create a resource group in Azure with the following proper
 - name: `my-resource-group`
 - location: `North Europe`
 
-Once the resource group is created, get the properties of the resource group and output them to a file named `az-resource-group.txt`. 💡 Don't forget to use the `-o tsv` parameter in your `az` command.
+Once the resource group is created, get the properties of the resource group and output them to a file named `az-resource-group.txt`. 
+  
+💡 Tip: Don't forget to use the `-o tsv` parameter in your `az` command.

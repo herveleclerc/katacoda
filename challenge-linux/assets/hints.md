@@ -45,16 +45,9 @@ Don't forget to output of the `az` command in a file named `az-resource-group.tx
 
 ## Task 4, Hint 1
 
-The expected `my-xargs.sh` file has not been created yet.
 
+The expected `az-vnet.txt` file has not been created yet.
 ## Task 4, Hint 2
 
-The `my-xargs.sh` should just have one usage of `xargs` in a single line.
-
-## Task 4, Hint 3
-
-There should be 5 files present called 1.txt, 2.txt, 3.txt, 4.txt, and 5.txt.
-
-## Task 4, Hint 4
-
-Each one of the 5 text files should contain the line "I am n", where n is the matching number in the file name. Did you consider this form `echo -n '1 2 3 4 5' | xargs -d ' ' -i sh -c "touch {}.txt ; echo 'I am {}' > {}.txt"`?
+The `az-vnet.txt` file does not contain the expected data.
+Don't forget to output of the `az` command in a file named `az-vnet.txt`

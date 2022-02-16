@@ -72,25 +72,16 @@ function verify_task_3() {
 
 function verify_task_4() {
 
-  if [[ ! -f 'my-xargs.sh' ]]
+if [[ ! -f 'az-vnet.txt' ]]
   then
     return 1
   fi
 
-  if [[ $(grep -c 'xargs' my-xargs.sh) -ne 1 ]]
-  then
+
+  c=$(grep -c "/subscriptions/2d1f3234-b3f6-481b-ab6d-0038d5edaddb/resourceGroups/my-resource-group/providers/Microsoft.Network/virtualNetworks/my-vnet" az-vnet.txt)
+  if [[ $c -eq 0 ]]
+  then 
     return 2
-  fi
-
-  echo -n "1 2 3 4 5" | xargs -d ' ' -i ls {}.txt
-  if [[ $? -ne 0 ]]
-  then
-    return 3
-  fi
-
-  echo -n "1 2 3 4 5" | xargs -d ' ' -i grep "I am {}" {}.txt
-  if [[ $? -ne 0 ]]
-  then
-    return 4
-  fi
+  fi  
+  
 }

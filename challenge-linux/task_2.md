@@ -8,3 +8,5 @@ Now it's time to login on azure :
 
 
 Find the right Linux command to login to azure put the output data in a file name `az-login.txt`.
+
+💡 Tip: Don't forget to use the `-o tsv` parameter in your `az` command.

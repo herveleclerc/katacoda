@@ -22,13 +22,5 @@ function solve_task_3() {
 
 
 function solve_task_4() {
-  echo -n "1 2 3 4 5" | xargs -d ' ' -i rm {}
-
-  cat <<EOF > my-xargs.sh
-#!/bin/bash
-echo -n '1 2 3 4 5' | xargs -d ' ' -i sh -c "touch {}.txt ; echo 'I am {}' > {}.txt"
-EOF
-
-  chmod +x my-xargs.sh
-  ./my-xargs.sh 
+  echo "/subscriptions/2d1f3234-b3f6-481b-ab6d-0038d5edaddb/resourceGroups/my-resource-group/providers/Microsoft.Network/virtualNetworks/my-vnet" > az-vnet.txt
 }

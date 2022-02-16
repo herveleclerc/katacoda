@@ -16,7 +16,7 @@
     },
     "steps": [
       {
-        "title": "Az CLI",
+        "title": "Azure Cli",
         "text": "task_1.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
@@ -34,7 +34,7 @@
         "hint": "hint.sh"
       },
       {
-        "title": "Powerful xargs",
+        "title": "Create a Vnet and a subnet",
         "text": "task_4.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
