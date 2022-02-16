@@ -9,8 +9,8 @@ exec 1>/var/log/init-background.log 2>&1
 set -x
 
 # Copy solver for now since its over 10mb.
-SOLVER_VERSION=0.5.3
-wget -q -O solver https://github.com/javajon/katacoda-solver/releases/download/$SOLVER_VERSION/solver-$SOLVER_VERSION-linux
+SOLVER_VERSION=0.4.1
+wget -q -O solver https://github.com/javajon/katacoda-solver/releases/download/$SOLVER_VERSION/solver-$SOLVER_VERSION-runner
 chmod +x solver && mv solver /usr/local/bin/
 
 # Common curl switches

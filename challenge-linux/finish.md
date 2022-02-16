@@ -7,8 +7,6 @@ With these challenging tasks you have learned how to:
 &nbsp;&nbsp;&nbsp;&nbsp;🏅 Counts words in a PDF  
 &nbsp;&nbsp;&nbsp;&nbsp;🏅 Show your mastery of xargs
 
-Never let your learning stop -- there is a wealth of Linux topics in the O'Reilly Media library.
-
 ## References 📚
 
 - [Learning Modern Linux](https://learning.oreilly.com/library/view/learning-modern-linux/9781098108939/)

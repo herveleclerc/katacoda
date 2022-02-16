@@ -1,7 +1,7 @@
 {
   "type": "challenge@0.8",
-  "title": "Linux Challenge: Example Using Solver",
-  "description": "An example Challenge showing authors how to use the Solver features.",
+  "title": "Challenge Example - Linux Challenge Using the Solver Utility",
+  "description": "An example challenge showing authors how to use the solver features.",
   "difficulty": "Beginner",
   "time": "30 minutes",
   "details": {

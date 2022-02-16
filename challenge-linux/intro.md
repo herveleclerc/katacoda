@@ -1,6 +1,6 @@
-This O'Reilly Challenge helps strengthen your understanding of the some basics of Linux commands. It is assumed you are comfortable with the basic commands of Linux and know how to access the common help and documentation sources.
+This challenge helps strengthen your understanding of the some basics of Linux commands. It assumes you are comfortable with  basic Linux commands and know how to access the common help and documentation sources.
 
-In this Challenge, you will use a basic Linux shell to complete the solutions for each task.
+In this challenge, you will use a basic Linux shell to complete the solutions for each task.
 
 ## Challenge
 
@@ -16,6 +16,6 @@ If you are unfamiliar with these concepts, [you may want to start with this docu
 
 ---
 
-Your mission in this Challenge, should you choose to accept it, is to complete the stated goals. This Challenge presents a series of tasks as you successfully complete each goal. The scenario continuously inspects the state of your work to verify your solutions for each task. When the verification passes, you move forward. When the verification fails, be sure you understand the details of the step's goal(s) and try again. If you are really stuck, try revealing a hint.
+Your mission in this challenge, should you choose to accept it, is to complete the stated goals. This challenge presents a series of tasks as you successfully complete each goal. The scenario continuously inspects the state of your work to verify your solutions for each task. When the verification passes, you move forward. When the verification fails, be sure you understand the details of the step's goal(s) and try again. If you are really stuck, try revealing a hint.
 
-This Challenge will self-destruct in 60 minutes. 🍀 **Good luck!** 🍀
+This challenge will self-destruct in 60 minutes. 🍀 **Good luck!** 🍀

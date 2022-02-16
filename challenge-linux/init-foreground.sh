@@ -4,7 +4,7 @@ FREQUENCY=1                                          # Delay between each check 
 BACKGROUND_SIGNAL_FILE='/opt/.backgroundfinished'    # File updated by background to indicate completion
 BACKGROUND_SAFE_WORD='done'                          # Word in BACKGROUND_SIGNAL_FILE indicating completion
 START_MESSAGE='Starting scenario'                    # Message before the progress animation
-END_NORMAL_MESSAGE='Challenge ready. You have a running Kubernetes cluster.'
+END_NORMAL_MESSAGE='Challenge ready.'
 END_KILLED_MESSAGE='Interupted. This scenario may still be initializing.'
 
 SPINNER_COLOR_NUM=2                # Color to use, unless COLOR_CYCLE=1
