@@ -4,15 +4,15 @@ This challenge is a part of alter way teaching platform
 
 In the following steps you will be asked to:
 
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Install azure cli 
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Login to azure platform
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a resource group
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a virtual network
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a subnet
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a public IP address
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a network security group
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a network interface
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a virtual machine
+    ☐ Install azure cli   
+    ☐ Login to azure platform  
+    ☐ Create a resource group  
+    ☐ Create a virtual network  
+    ☐ Create a subnet  
+    ☐ Create a public IP address  
+    ☐ Create a network security group  
+    ☐ Create a network interface  
+    ☐ Create a virtual machine  
 
 ---
 
