@@ -13,6 +13,12 @@ SOLVER_VERSION=0.4.1
 wget -q -O solver https://github.com/javajon/katacoda-solver/releases/download/$SOLVER_VERSION/solver-$SOLVER_VERSION-runner
 chmod +x solver && mv solver /usr/local/bin/
 
+
+curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+
+AZ_REPO=$(lsb_release -cs)
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+
 # Common curl switches
 echo '-s' >> ~/.curlrc
 

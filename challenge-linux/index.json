@@ -1,7 +1,7 @@
 {
   "type": "challenge@0.8",
-  "title": "Challenge Example - Linux Challenge Using the Solver Utility",
-  "description": "An example challenge showing authors how to use the solver features.",
+  "title": "Challenge Azure",
+  "description": "Azure Challenge from alter way treaning platform.",
   "difficulty": "Beginner",
   "time": "30 minutes",
   "details": {
@@ -9,14 +9,14 @@
       "text": "intro.md",
       "courseData": "init-background.sh",
       "code": "init-foreground.sh",
-      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+      "credits": "[herve leclerc](mail:herve.leclerc@alterway.fr)"
     },
     "finish": {
       "text": "finish.md"
     },
     "steps": [
       {
-        "title": "Moo!",
+        "title": "Az CLI",
         "text": "task_1.md",
         "verify": "verify.sh",
         "hint": "hint.sh"

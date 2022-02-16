@@ -6,8 +6,9 @@
 
 function solve_task_1() {
   yes | sudo apt update
-  yes | sudo apt-get install cowsay figlet
-  cowsay "O'Reilly, inspiring the future for more than 40 years" > cowsay.txt
+  yes | sudo apt-get install ca-certificates curl apt-transport-https lsb-release gnupg
+  yes | sudo apt-get install azure-cli
+  az --version  > az.txt
 }
 
 

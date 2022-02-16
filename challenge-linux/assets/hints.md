@@ -6,19 +6,19 @@ When authoring this collection of hints, mark each hint with the double pound (#
 
 ## Task 1, Hint 1
 
-The latest version of `cowsay` may be herded into this challenge using apt-get. The package manager is not reporting cowsay is installed.
+The latest version of `az` may be herded into this challenge using apt-get. The package manager is not reporting az is installed.
 
 ## Task 1, Hint 2
 
-The `cowsay` utility is not appearing in the `whereis` $PATH.
+The `az` utility is not appearing in the `whereis` $PATH.
 
 ## Task 1, Hint 3
 
-The expected `cowsay.txt` file has not been created yet.
+The expected `az.txt` file has not been created yet.
 
 ## Task 1, Hint 4
 
-The `cowsay.txt` file is present but does not contain the expected message formatted to the bovine culture as outputted by the cowsay utility.
+The `az.txt` file is present but does not contain the expected message formatted as outputted by the az utility.
 
 ---
 
