@@ -56,58 +56,17 @@ function verify_task_2() {
 
 function verify_task_3() {
 
-  dpkg-query -l | grep poppler-utils
-
-  if [[ $? -ne 0 ]]
-  then 
+  if [[ ! -f 'az-resource-group.txt' ]]
+  then
     return 1
-  fi  
+  fi
 
-  whereis pdftotext
-  if [[ $? -ne 0 ]]
+
+  c=$(grep -c "/subscriptions/2d1f3234-b3f6-481b-ab6d-0038d5edaddb/resourceGroups/my-resource-group.*northeurope" az-resource-group.txt)
+  if [[ $c -eq 0 ]]
   then 
     return 2
-  fi
-
-  if [[ ! -f 'streetcar.txt' ]]
-  then
-    return 3
-  fi
-
-  grep 'on a street in New Orleans' streetcar.txt
-  if [[ $? -ne 0 ]]
-  then
-    return 4
-  fi
-
-  if [[ ! -f 'stella.properties' ]]
-  then
-    return 5
-  fi
-
-  grep 'stella=' stella.properties
-  if [[ $? -ne 0 ]]
-  then
-    return 6
-  fi
-
-  grep 'stella_exclamation=' stella.properties
-  if [[ $? -ne 0 ]]
-  then
-    return 7
-  fi
-
-  grep 'stella=155' stella.properties
-  if [[ $? -ne 0 ]]
-  then
-    return 8
-  fi
-
-  grep 'stella_exclamation=16' stella.properties
-  if [[ $? -ne 0 ]]
-  then
-    return 9
-  fi
+  fi  
 }
 
 

@@ -22,13 +22,13 @@
         "hint": "hint.sh"
       },
       {
-        "title": "Formatting Output",
+        "title": "Logging to Azure Tenant",
         "text": "task_2.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Hey Stella!",
+        "title": "Create a resource group",
         "text": "task_3.md",
         "verify": "verify.sh",
         "hint": "hint.sh"

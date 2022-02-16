@@ -34,39 +34,13 @@ The `azure-login.txt` file does not contain the expected data. don't forget to o
 
 ## Task 3, Hint 1
 
-The apt package manager is not reporting poppler-utils is installed.
+The expected `az-resource-group.txt` file has not been created yet.
 
 ## Task 3, Hint 2
 
-The `pdf2text` utility is not appearing in the `whereis` $PATH.
+The `az-resource-group.txt` file does not contain the expected data. 
+Don't forget to output of the `az` command in a file named `az-resource-group.txt`
 
-## Task 3, Hint 3
-
-The expected `streetcar.txt` file has not been created yet.
-
-## Task 3, Hint 4
-
-The `streetcar.txt` file does not contain the expect text from the script found in the PDF. Did you use pdf2text to fill the text file?
-
-## Task 3, Hint 5
-
-The expected `stella.properties` file has not been created yet.
-
-## Task 3, Hint 6
-
-The `stella.properties` file does not have a setting for `stella=`.
-
-## Task 3, Hint 7
-
-The `stella.properties` file does not have a setting for `stella_exclamation=`.
-
-## Task 3, Hint 8
-
-The `stella.properties` file does not have the correct value for `stella=?`.
-
-## Task 3, Hint 9
-
-The `stella.properties` file does not have the correct value for `stella_exclamation=?`.
 ---
 
 ## Task 4, Hint 1

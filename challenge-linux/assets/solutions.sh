@@ -17,11 +17,7 @@ function solve_task_2() {
 
 
 function solve_task_3() {
-  yes | sudo apt update
-  yes | sudo apt-get install poppler-utils
-  pdftotext streetcar.pdf streetcar.txt
-  echo "stella=$(grep -c "Stella" streetcar.txt)" > stella.properties
-  echo "stella_exclamation=$(grep -c "Stella!" streetcar.txt)" >> stella.properties
+  echo "/subscriptions/2d1f3234-b3f6-481b-ab6d-0038d5edaddb/resourceGroups/my-resource-group northeurope" > az-resource-group.txt
 }
 
 
