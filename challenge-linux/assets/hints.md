@@ -24,11 +24,11 @@ The `az.txt` file is present but does not contain the expected message formatted
 
 ## Task 2, Hint 1
 
-The expected `kinder-passwd.txt` file has not been created yet.
+The expected `azure-login.txt` file has not been created yet.
 
 ## Task 2, Hint 2
 
-The `kinder-passwd.txt` file does container the passwd data in its expected columnar form. Have you discovered the ['column'](https://man7.org/linux/man-pages/man1/column.1.html) utility yet?
+The `azure-login.txt` file does not contain the expected data. don't forget to output of the login in a file named azure-login.txt
 
 ---
 

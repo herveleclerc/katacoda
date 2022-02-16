@@ -11,9 +11,8 @@ function solve_task_1() {
   az --version  > az.txt
 }
 
-
 function solve_task_2() {
-  cat /etc/passwd | column -t -s : > kinder-passwd.txt
+ echo "AzureCloud	dafda750-ae63-46d1-8b81-3546648b438c 2d1f3234-b3f6-481b-ab6d-0038d5edaddb" > az-login.txt 
 }
 
 

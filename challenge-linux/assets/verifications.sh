@@ -41,14 +41,13 @@ function verify_task_1() {
 
 
 function verify_task_2() {
-  if [[ ! -f 'kinder-passwd.txt' ]]
+  if [[ ! -f 'az-login.txt' ]]
   then
     return 1
   fi
 
-  cat /etc/passwd | column -t -s : > '/tmp/expected-format.txt'
-  diff '/tmp/expected-format.txt' 'kinder-passwd.txt'
-  if [[ $? -ne 0 ]]
+  c=$(grep -c "AzureCloud.*dafda750-ae63-46d1-8b81-3546648b438c.*2d1f3234-b3f6-481b-ab6d-0038d5edaddb" az-login.txt)
+  if [[ $c -eq 0 ]]
   then 
     return 2
   fi  

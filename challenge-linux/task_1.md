@@ -1,4 +1,4 @@
-<img align="right" src="../assets/cow-311266_640.png" width="15%">
+<img align="right" src="../assets/azure-cli-stack-220x234.png" width="15%">
 Use `az` with the parameter --version
 
 
