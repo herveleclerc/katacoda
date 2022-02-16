@@ -1,18 +1,18 @@
-This O'Reilly Challenge helps strengthen your understanding of the some basics of Linux commands. It is assumed you are comfortable with the basic commands of Linux and know how to access the common help and documentation sources.
-
-In this Challenge, you will use a basic Linux shell to complete the solutions for each task.
+This challenge is a part of alter way teaching platform
 
 ## Challenge
 
 In the following steps you will be asked to:
 
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Install a Linux command line tool  
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Format some output  
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Counts words in a PDF  
-&nbsp;&nbsp;&nbsp;&nbsp;☐ Show your mastery of xargs
-
-<img align="right" src="./assets/learning-modern-linux-book.jpg" width="15%">
-If you are unfamiliar with these concepts, [you may want to start with this documentation first](https://learning.oreilly.com/library/view/learning-modern-linux/9781098108939/).
+&nbsp;&nbsp;&nbsp;&nbsp;☐ Install azure cli 
+&nbsp;&nbsp;&nbsp;&nbsp;☐ Login to azure platform
+&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a resource group
+&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a virtual network
+&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a subnet
+&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a public IP address
+&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a network security group
+&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a network interface
+&nbsp;&nbsp;&nbsp;&nbsp;☐ Create a virtual machine
 
 ---
 

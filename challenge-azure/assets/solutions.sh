@@ -5,9 +5,8 @@
 # the corresponding verify_task_# function after each solver_task_# function completes. 
 
 function solve_task_1() {
-  yes | sudo apt update
-  yes | sudo apt-get install cowsay
-  cowsay "O'Reilly, inspiring the future for more than 40 years" > cowsay.txt
+  curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+  az --version > cowsay.txt
 }
 
 

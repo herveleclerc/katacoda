@@ -1,24 +1,20 @@
-# Task Hints Authoring Guidelines
 
-When authoring this collection of hints, mark each hint with the double pound (##) markdown header and title the header with Task n, Hint n. Capital T and H. Tasks and Hints nymbers start at 1. The delay period before hints are offered is defined and exported as `HINTS_DELAY` at the top of the `verifications.sh` script. See this [Challenge Hints](https://www.katacoda.community/challenges.html#ui-example) in the authoring guide on how to provide hints for your challenge scenarios. The [Katacoda markdown extensions](https://www.katacoda.community/scenario-syntax.html#katacoda-s-markdown-extensions) can be applied in this markdown. An optional horizontal divider (`---`) can be added before each Task section.
-
----
 
 ## Task 1, Hint 1
 
-The latest version of `cowsay` may be herded into this challenge using apt-get. The package manager is not reporting cowsay is installed.
+The latest version of `az` may be herded into this challenge using apt-get. 
 
 ## Task 1, Hint 2
 
-The `cowsay` utility is not appearing in the `whereis` $PATH.
+The installation of `az` utility is described here [install az cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt)
 
 ## Task 1, Hint 3
 
-The expected `cowsay.txt` file has not been created yet.
+The expected `az.txt` file has not been created yet.
 
 ## Task 1, Hint 4
 
-The `cowsay.txt` file is present but does not contain the expected message formatted to the bovine culture as outputted by the cowsay utility.
+The `az.txt` file is present but does not contain the expected message formatted `az --version`.
 
 ---
 

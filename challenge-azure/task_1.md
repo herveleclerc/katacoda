@@ -1,6 +1,5 @@
-<img align="right" src="../assets/cow-311266_640.png" width="15%">
-Use cowsay with the quote:
+<img align="right" src="../assets/azure-cli-stack-220x234.png">
 
-> O'Reilly, inspiring the future for more than 40 years{{copy}}
+Install azure-cli
 
-Steer this bovonic output to a file `cowsay.txt`.
+output of `az --version` in file `az.txt`

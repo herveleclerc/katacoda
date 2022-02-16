@@ -13,26 +13,26 @@ export VERIFY_TIMEOUT=3s
 
 
 function verify_task_1() {
-  dpkg-query -l | grep cowsay
+  dpkg-query -l | grep az
   if [[ $? -ne 0 ]]
   then 
     return 1
   fi  
 
-  whereis cowsay
+  whereis az
   if [[ $? -ne 0 ]]
   then 
     return 2
   fi
 
 
-  if [[ ! -f 'cowsay.txt' ]]
+  if [[ ! -f 'az.txt' ]]
   then
     return 3
   fi
 
-  cowsay "O'Reilly, inspiring the future for more than 40 years" > '/tmp/expected-cowsay.txt'
-  diff '/tmp/expected-cowsay.txt' 'cowsay.txt'
+  az --version > '/tmp/az.txt'
+  diff '/tmp/az.txt' 'az.txt'
   if [[ $? -ne 0 ]]
   then 
     return 4
