@@ -19,3 +19,5 @@ Once the vnet is created, get the ID of the Vnet and output it to a file named `
 
 
 
+
+
