@@ -38,10 +38,11 @@ Regardez les log du pod
 kubectl logs -l app=hello-world
 ```
 
-Corrigez l'erreur en ligne de commande !
+**Corrigez l'erreur en ligne de commande !**
 
-Soyez Patient et observe les changements avec la commande
+Soyez Patient et observe les changements avec la commande  
 
 ```
  watch 'kubectl get pods --selector app=hello-world'
 ```
+
