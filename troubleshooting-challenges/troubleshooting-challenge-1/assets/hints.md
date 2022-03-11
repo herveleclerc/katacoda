@@ -7,4 +7,7 @@ When authoring this collection of hints, mark each hint with the double pound (#
 ## Task 1, Hint 1
 
 Le Déploiement n'est pas réparé, cherchez du coté de l'image
----
+
+## Task 1, Hint 2
+
+Le Déploiement n'est pas réparé, cherchez du coté de l'image
