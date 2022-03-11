@@ -16,8 +16,14 @@
     },
     "steps": [
       {
-        "title": "Vérification du Déploiement",
+        "title": "Correction du déploiement",
         "text": "task_1.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
+      },
+      {
+        "title": "Mise à l'échelle du déploiement",
+        "text": "task_2.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       }

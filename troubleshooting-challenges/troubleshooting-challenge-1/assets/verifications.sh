@@ -15,7 +15,24 @@ function verify_task_1() {
  
   content=$(/usr/bin/kubectl --kubeconfig=/root/.kube/config get pods --no-headers --selector app=hello-world  | grep hello-world | awk '{print $3;}')
   
+
   if [[ "$content" == "Running" ]]
+  then
+    echo "Verification passed"
+    return 0
+  else
+    echo "Verification failed"
+    return 1
+  fi
+}
+
+
+function verify_task_2() {
+ 
+  content=$(/usr/bin/kubectl --kubeconfig=/root/.kube/config get deploy --no-headers --selector app=hello-world  | grep hello-world | awk '{print $2;}')
+  
+
+  if [[ "$content" == "2/2" ]]
   then
     echo "Verification passed"
     return 0

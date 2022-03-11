@@ -11,3 +11,9 @@ Le Déploiement n'est pas réparé, cherchez du coté de l'image
 ## Task 1, Hint 2
 
 Le Déploiement n'est pas réparé, cherchez du coté de l'image
+
+---
+
+## Task 2, Hint 1
+
+Le déploiement n'a pas pas été mis à l'échelle à la bonne valeur, regardez la notion de réplicas

@@ -33,7 +33,8 @@ kubectl get pods --selector app=hello-world ↩️
 
 - Notez le **STATUS** 
 
-  - Il est en `ImagePullBackOff`  ou `ErrImagePull` 
+  - Il est en `ImagePullBackOff`  ou `ErrImagePull`   
+  
 
 - Regardez les logs du pod 
 
@@ -47,9 +48,11 @@ Maintenant c'est à vous
 
 **Corrigez l'erreur en ligne de commande !**
 
-Soyez Patient et observez les changements avec la commande  
+Soyez patient et observez les changements avec la commande  
+
 
 ```
- watch 'kubectl get pods --selector app=hello-world'
+ watch 'kubectl get pods --selector app=hello-world' ↩️
 ```
 
+  
