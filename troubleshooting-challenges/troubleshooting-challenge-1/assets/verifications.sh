@@ -13,8 +13,8 @@ export VERIFY_TIMEOUT=3s
 
 function verify_task_1() {
  
-  content=$(cat pod-status.txt)
-
+  content=$(/usr/bin/kubectl --kubeconfig=/root/.kube/config get pods --no-headers --selector app=hello-world  | grep hello-world | awk '{print $3;}')
+  
   if [[ "$content" == "Running" ]]
   then
     echo "Verification passed"

@@ -5,5 +5,5 @@
 # the corresponding verify_task_# function after each solver_task_# function completes. 
 
 function solve_task_1() {
-  /usr/bin/kubectl --kubeconfig=/root/.kube/config get pods --no-headers --selector app=hello-world  | grep hello-world | awk '{print $3;}' > /root/pod-status.txt
+ echo "Running $(date)" >> /tmp/running.txt
 }
