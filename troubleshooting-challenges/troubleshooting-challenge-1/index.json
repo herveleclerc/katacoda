@@ -27,8 +27,6 @@
         {"file": "verifications.sh", "target": "/usr/local/bin/", "chmod": "+x"},
         {"file": "hints.md", "target": "/opt"},
         {"file": "solutions.sh.enc", "target": "/opt"},
-
-        {"file": "streetcar.pdf", "target": "/root"},
         {"file": "my-xargs.sh", "target": "/root", "chmod": "+x"}
       ]
     }
