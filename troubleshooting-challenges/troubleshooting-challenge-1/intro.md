@@ -2,7 +2,7 @@ Ce Challenge vous premettra de voir si vous pouvez trouver les erreurs cachées 
 
 ## Challenge
  
-Le déploiement a été mis en erreur intentionnelement, Vous devezfixer les erreurs.
+Le déploiement a été mis en erreur intentionnelement, Vous devez fixer les erreurs. Puis suivre les instructions pour continuer le challenge.
 
 Vous apprendrerz avec ce challenge à :
 
@@ -11,6 +11,7 @@ Vous apprendrerz avec ce challenge à :
 - Lister les pods d'un déploiement
 - Voir les caractéristiques d'un pod
 - Mettre à jour un déploiement
+- Mettre à l'échelle un déploiement
 
 
 ---
