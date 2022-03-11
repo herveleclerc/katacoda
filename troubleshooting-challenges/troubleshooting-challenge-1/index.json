@@ -16,7 +16,7 @@
     },
     "steps": [
       {
-        "title": "Déploiement",
+        "title": "Vérification du Déploiement",
         "text": "task_1.md",
         "verify": "verify.sh",
         "hint": "hint.sh"

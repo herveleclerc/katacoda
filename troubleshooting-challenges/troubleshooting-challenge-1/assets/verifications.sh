@@ -13,7 +13,7 @@ export VERIFY_TIMEOUT=3s
 
 function verify_task_1() {
  
-  diff 'pod-status.txt' 'RUNNING'
+  diff 'pod-status.txt' 'Running'
   if [[ $? -ne 0 ]]
   then 
     return 2
