@@ -7,4 +7,3 @@
 function solve_task_1() {
   kubectl get pods --no-headers --selector app=hello-world  | grep hello-world | awk '{print $3;}' > pod-status.txt
 }
-

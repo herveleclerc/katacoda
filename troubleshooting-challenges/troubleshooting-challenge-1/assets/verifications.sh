@@ -13,9 +13,14 @@ export VERIFY_TIMEOUT=3s
 
 function verify_task_1() {
  
-  diff 'pod-status.txt' 'Running'
-  if [[ $? -ne 0 ]]
-  then 
-    return 2
-  fi  
+  content=$(cat pod-status.txt)
+
+  if [[ "$content" == "Running" ]]
+  then
+    echo "Verification passed"
+    return 0
+  else
+    echo "Verification failed"
+    return 1
+  fi
 }
