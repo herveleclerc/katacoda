@@ -1,0 +1,11 @@
+{
+  "title": "Challenge Trouble Shooting",
+  "description": "Cherchez et corrigez les problèmes de la plateforme",
+  "courses": [
+    {
+      "course_id": "troubleshooting-challenge-1",
+      "title": "Challenge 1",
+      "description": "Premier challenge",
+    }
+  ]
+}
