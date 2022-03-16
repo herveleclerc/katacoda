@@ -34,8 +34,20 @@
         "hint": "hint.sh"
       },
       {
-        "title": "Formats de sortie",
+        "title": "Output",
         "text": "task_4.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
+      },
+      {
+        "title": "Services",
+        "text": "task_5.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
+      },
+      {
+        "title": "Déploiements",
+        "text": "task_6.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       }

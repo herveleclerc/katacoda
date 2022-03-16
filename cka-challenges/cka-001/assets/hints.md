@@ -26,3 +26,22 @@ Pour gagner du temps utilisez le mode impératif de `kubectl`
 ## Task 4, Hint 1
 
 N'oubliez pas le format json
+
+## Task 4, Hint 2
+
+Avez vous oubliez de rediriger le fichier json dans le répertoire /tmp ?
+
+---
+
+## Task 5, Hint 1
+
+Vérifiez le type et le nom
+
+
+---
+
+## Task 6, Hint 1
+
+Vérifiez le nombre de réplicas
+
+

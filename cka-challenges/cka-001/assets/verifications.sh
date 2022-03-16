@@ -60,8 +60,14 @@ function verify_task_3() {
 function verify_task_4() {
  
   content=$(${kctl} get nodes -o json | jq -r '.items[0].metadata.name')
+
+  if [ -f "/tmp/nodes.json" ]; then
+    controplane=$(cat < "/tmp/nodes.json" | jq -r '.items[0].metadata.name')
+  else 
+    return 2
+  fi
   
-  if [[ "$content" == "????" ]]
+  if [[ "$content" == "$controplane" ]]
   then
     echo "Verification passed"
     return 0
@@ -70,3 +76,33 @@ function verify_task_4() {
     return 1
   fi
 }
+
+function verify_task_5() {
+ 
+  content=$(${kctl} get services -l tier=msg --no-headers | grep messaging-service | awk '{print $1" "$2;}')
+  
+  if [[ "$content" == "messaging-service ClusterIP" ]]
+  then
+    echo "Verification passed"
+    return 0
+  else
+    echo "Verification failed"
+    return 1
+  fi
+}
+
+function verify_task_6() {
+ 
+  content=$(${kctl} get deploy --no-headers --selector app=hr-web-app  | grep hr-web-app | awk '{print $2;}')
+  
+
+  if [[ "$content" == "2/2" ]]
+  then
+    echo "Verification passed"
+    return 0
+  else
+    echo "Verification failed"
+    return 1
+  fi
+}
+
