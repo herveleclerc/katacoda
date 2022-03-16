@@ -1,0 +1,11 @@
+{
+  "title": "Préparation CKA",
+  "description": "Préparation à la Certification CKA (Certified Kubernetes Administrator)",
+  "courses": [
+    {
+      "course_id": "cka-001",
+      "title": "Premier challenge",
+      "description": "Effectuer et terminer toutes les demandes"
+    }
+  ]
+}

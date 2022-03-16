@@ -4,8 +4,8 @@
   "courses": [
     {
       "course_id": "troubleshooting-challenge-1",
-      "title": "Challenge 1",
-      "description": "Premier challenge"
+      "title": "Challenge n°1",
+      "description": "Trouvez une ou des erreurs au niveau d'un déploiement"
     }
   ]
 }
