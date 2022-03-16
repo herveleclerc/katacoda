@@ -11,11 +11,11 @@ export HINTS_DELAY=15
 # Max time for verify blocking commands. Zero or positive integer time units s, m, h.
 export VERIFY_TIMEOUT=3s
 
-alias k='/usr/bin/kubectl --kubeconfig=/root/.kube/config'
+export kctl="/usr/bin/kubectl --kubeconfig=/root/.kube/config"
 
 function verify_task_1() {
  
-  content=$(k get pods --no-headers --selector run=nginx-pod  | grep nginx-pod | awk '{print $3;}')
+  content=$(${kctl} get pods --no-headers --selector run=nginx-pod  | grep nginx-pod | awk '{print $3;}')
   
   if [[ "$content" == "Running" ]]
   then
@@ -29,7 +29,7 @@ function verify_task_1() {
 
 function verify_task_2() {
  
-  content=$(k get pods --no-headers --selector run=messaging --selector tier=msg  | grep messaging | awk '{print $3;}')
+  content=$(${kctl} get pods --no-headers --selector run=messaging --selector tier=msg  | grep messaging | awk '{print $3;}')
   
 
   if [[ "$content" == "Running" ]]
@@ -45,7 +45,7 @@ function verify_task_2() {
 
 function verify_task_3() {
  
-  content=$(k get ns --no-headers | grep cka-001 | awk '{print $2;}')
+  content=$(${kctl} get ns --no-headers | grep cka-001 | awk '{print $2;}')
   
   if [[ "$content" == "Active" ]]
   then
@@ -59,7 +59,7 @@ function verify_task_3() {
 
 function verify_task_4() {
  
-  content=$(k get nodes -o json | jq -r '.items[0].metadata.name')
+  content=$(${kctl} get nodes -o json | jq -r '.items[0].metadata.name')
   
   if [[ "$content" == "????" ]]
   then

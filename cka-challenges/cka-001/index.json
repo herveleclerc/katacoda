@@ -16,25 +16,25 @@
     },
     "steps": [
       {
-        "title": "Déployer des pods",
+        "title": "Pods",
         "text": "task_1.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Déployer des pods avec des labels",
+        "title": "Toujours des Pods",
         "text": "task_2.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Créer un namespace",
+        "title": "Namespaces",
         "text": "task_3.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Gérer l'output des commandes",
+        "title": "Formats de sortie",
         "text": "task_4.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
