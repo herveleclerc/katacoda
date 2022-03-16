@@ -1,9 +1,9 @@
 {
   "type": "challenge@0.8",
-  "title": "Challenge TroubleShooting Kubernetes",
-  "description": "Trouverez vous les erreurs qui se cachent dans votre cluster Kubernetes ?",
+  "title": "Challenge Préparation Certification CKA",
+  "description": "Préparez votre certification CKA en réalisant plusieurs exercices",
   "difficulty": "intermediate",
-  "time": "30 minutes",
+  "time": "60 minutes",
   "details": {
     "intro": {
       "text": "intro.md",
@@ -16,14 +16,26 @@
     },
     "steps": [
       {
-        "title": "Correction du déploiement",
+        "title": "Déployer des pods",
         "text": "task_1.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Mise à l'échelle du déploiement",
+        "title": "Déployer des pods avec des labels",
         "text": "task_2.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
+      },
+      {
+        "title": "Créer un namespace",
+        "text": "task_3.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
+      },
+      {
+        "title": "Gérer l'output des commandes",
+        "text": "task_4.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       }

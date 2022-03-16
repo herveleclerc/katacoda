@@ -71,8 +71,7 @@ start_progress () {
   source ~/.bashrc
 
   # In shell context for student, so set any environment variables for learner here, if needed:
-
-  kubectl create deployment hello-world --image=tutum/hello-world:lotest
+  
 }
 
 clear && start_progress

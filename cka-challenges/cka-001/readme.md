@@ -1,6 +1,6 @@
-# Troubleshooting  Challenges - Apprendre à debugger une infrastructure kubernetes
+# Préparation CKA
 
-1
+CKA Prep
 
 ## A propos de ce Challenge
 
