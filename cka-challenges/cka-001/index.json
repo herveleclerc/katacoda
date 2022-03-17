@@ -50,6 +50,48 @@
         "text": "task_6.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
+      },
+      {
+        "title": "Pods Statiques",
+        "text": "task_7.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
+      },
+      {
+        "title": "Pods in namespaces",
+        "text": "task_8.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
+      },
+      {
+        "title": "Le début des problèmes",
+        "text": "task_9.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
+      },
+      {
+        "title": "Network",
+        "text": "task_10.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
+      },
+      {
+        "title": "Parseur JSONPATH",
+        "text": "task_11.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
+      },
+      {
+        "title": "Volumes",
+        "text": "task_12.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
+      },
+      {
+        "title": "Fin...",
+        "text": "task_13.md",
+        "verify": "verify.sh",
+        "hint": "hint.sh"
       }
     ],
     "assets": {
@@ -57,7 +99,11 @@
         {"file": "verifications.sh", "target": "/usr/local/bin/", "chmod": "+x"},
         {"file": "hints.md", "target": "/opt"},
         {"file": "solutions.sh.enc", "target": "/opt"},
-        {"file": "my-xargs.sh", "target": "/root", "chmod": "+x"}
+        {"file": "my-xargs.sh", "target": "/root", "chmod": "+x"},
+        {"file": "orange-app.yaml", "target": "/root"},
+        {"file": "orange-app-good.yaml", "target": "/opt"},
+        {"file": "pv-analytics.yaml", "target": "/opt"},
+        {"file": "fin-challenge.json", "target": "/tmp"}
       ]
     }
   },

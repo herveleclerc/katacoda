@@ -44,4 +44,35 @@ Vérifiez le type et le nom
 
 Vérifiez le nombre de réplicas
 
+---
+## Task 7, Hint 1
 
+Regardez dans le répertoire /var/lib/kubelet
+
+
+---
+## Task 8, Hint 1
+
+N'oubliez pas le namespace
+
+
+---
+## Task 9, Hint 1
+
+Il ya un typo quelque part
+
+---
+## Task 10, Hint 1
+
+Bien faire la différence entre les types de services
+
+
+---
+## Task 11, Hint 1
+
+N'oubliez pas le flag dans la commande
+
+---
+## Task 12, Hint 1
+
+Vérifiez bien les arguments

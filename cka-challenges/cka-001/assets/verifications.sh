@@ -106,3 +106,144 @@ function verify_task_6() {
   fi
 }
 
+function verify_task_7() {
+ 
+  hostname=$(hostname)
+
+  content=$(${kctl} get pod --no-headers --selector run=static-pod  | grep static-pod-${hostname} | awk '{print $3;}')
+  
+
+  if [[ "$content" == "Running" ]]
+  then
+    echo "Verification passed"
+    return 0
+  else
+    echo "Verification failed"
+    return 1
+  fi
+}
+
+function verify_task_8() {
+ 
+  content=$(${kctl} get pods --no-headers -n finance --selector run=temp-bus  | grep temp-bus | awk '{print $3;}')
+  
+  if [[ "$content" == "Running" ]]
+  then
+    echo "Verification passed"
+    return 0
+  else
+    echo "Verification failed"
+    return 1
+  fi
+}
+
+function verify_task_9() {
+ 
+  content=$(${kctl} get pods --no-headers -n default --selector run=orange | grep orange | awk '{print $3;}')
+  
+  if [[ "$content" == "Running" ]]
+  then
+    echo "Verification passed"
+    return 0
+  else
+    echo "Verification failed"
+    return 1
+  fi
+}
+
+function verify_task_10() {
+ 
+  curl -s -o /dev/null localhost:30082
+
+  retVal=$?
+
+if [ $retVal -ne 0 ]
+  then
+    echo "Verification failed"
+    return 1
+  else
+    echo "Verification passed"
+    return 0
+  fi
+}
+
+function verify_task_11() {
+ 
+  content=$(${kctl} get nodes -o jsonpath='{.items[*].status.nodeInfo.osImage}')
+
+  if [ -f "/tmp/osImage.txt" ]; then
+    osImage=$(cat < "/tmp/osImage.txt")
+  else 
+    return 2
+  fi
+  
+  if [[ "$content" == "$osImage" ]]
+  then
+    echo "Verification passed"
+    return 0
+  else
+    echo "Verification failed"
+    return 1
+  fi
+}
+
+function verify_task_12() {
+ 
+  content=$(${kctl} get pv --no-headers | grep pv-analytics | awk '{print $1" "$2" "$3" "$5;}')
+  path=$(${kctl} get -o jsonpath='{.spec.hostPath.path}' pv pv-analytics)
+
+  if [[ "$content" == "pv-analytics 100Mi RWX Available" ]]
+  then
+    if [[ "$path" == "/pv/data-analytics" ]]
+    then
+      echo "Verification passed"
+      return 0
+    else
+      echo "Verification failed"
+      return 1
+    fi
+  else
+    echo "Verification failed"
+    return 1
+  fi
+}
+
+function verify_task_13() {
+  if [ -f "/tmp/fin-challenge.json" ]; then
+     prenom=$(cat < "/tmp/fin-challenge.json" | jq -r '.prenom')
+     nom=$(cat < "/tmp/fin-challenge.json" | jq -r '.nom')
+     email=$(cat < "/tmp/fin-challenge.json" | jq -r '.email')
+     code=$(cat < "/tmp/fin-challenge.json" | jq -r '.code')
+     if [[ -z "$prenom" ]]  ||  [[ -z "$nom" ]] || [[ -z "$code" ]] || [[ -z "$email" ]]
+     then
+       echo "Verification failed"
+       return 1
+     else
+       if [[ "$prenom" != "CHANGEZ-MOI" && "$nom" != "CHANGEZ-MOI" && "$code" != "CHANGEZ-MOI"  && "$email" != "CHANGEZ-MOI" ]]; then
+
+          curl --fail -X POST -H 'Content-Type: application/json' \
+            --data "{\"alias\":\"strongmind\",
+            \"emoji\":\":strongmind:\",
+             \"text\":\"Challenge cka-001\",
+            \"attachments\":[{\"title\":\"Réussite du Challenge cka-001 (katacoda)\",
+            \"title_link\":\"https://www.katacoda.com/awh/courses/cka-challenges/cka-001\",\"text\":\"$prenom $nom ($email) a réussi la certification\",\"color\":\"#764FA5\"}]}" \
+            https://rocket.alterway.fr/hooks/QxnH7sqdQwLeby5vP/E5KwEWg88cT8RHrJJifYzdG5wfL5RPySPzKwMxZp$code
+            retVal=$?
+            if [ $retVal -ne 0 ]
+            then
+              echo "Verification failed"
+              return 1
+            else
+              echo "Verification passed"
+              return 0
+            fi
+        else
+          echo "Verification failed"
+          return 1
+        fi
+     fi
+  else
+    return 1
+  fi
+}
+

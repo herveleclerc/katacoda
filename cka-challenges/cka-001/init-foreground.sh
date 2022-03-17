@@ -71,6 +71,10 @@ start_progress () {
   source ~/.bashrc
 
   # In shell context for student, so set any environment variables for learner here, if needed:
+
+  sleep 10
+
+  kubectl apply -f /root/orange-app.yaml
   
 }
 
