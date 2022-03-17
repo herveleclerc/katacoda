@@ -72,7 +72,7 @@ start_progress () {
 
   # In shell context for student, so set any environment variables for learner here, if needed:
 
-  Echo "Veuillez attendre que le challenge soit prêt."
+  echo "Veuillez attendre que le challenge soit prêt."
   sleep 60
 
   kubectl apply -f /root/orange-app.yaml
