@@ -9,7 +9,7 @@ Ces challenges vont vous permettre de préparer la certification CKA
 2. Les Services
 3. Les requêtes sur les objets kubernetes
 4. Les volumes
-5. 
+
 
 ---
 

@@ -62,19 +62,18 @@ function solve_task_12() {
 }
 
 function solve_task_13() { 
-  
-
   if [ -f "/tmp/fin-challenge.json" ]; then
      prenom="Hervé"
      nom="Leclerc"
      code=$(cat < "/tmp/fin-challenge.json" | jq -r '.code')
+     email=$(cat < "/tmp/fin-challenge.json" | jq -r '.email')
 
   curl -X POST -H 'Content-Type: application/json' \
    --data "{\"alias\":\"strongmind\",
             \"emoji\":\":strongmind:\",
              \"text\":\"Challenge cka-001\",
             \"attachments\":[{\"title\":\"Réussite du Challenge cka-001 (katacoda)\",
-            \"title_link\":\"https://www.katacoda.com/awh/courses/cka-challenges/cka-001\",\"text\":\"$prenom $nom a réussi la certification\",\"color\":\"#764FA5\"}]}" \
+            \"title_link\":\"https://www.katacoda.com/awh/courses/cka-challenges/cka-001\",\"text\":\"$prenom $nom ($email) a réussi la certification\",\"color\":\"#764FA5\"}]}" \
    https://rocket.alterway.fr/hooks/QxnH7sqdQwLeby5vP/E5KwEWg88cT8RHrJJifYzdG5wfL5RPySPzKwMxZp$code
   else
     return 0

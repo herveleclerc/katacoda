@@ -220,7 +220,6 @@ function verify_task_13() {
        return 1
      else
        if [[ "$prenom" != "CHANGEZ-MOI" && "$nom" != "CHANGEZ-MOI" && "$code" != "CHANGEZ-MOI"  && "$email" != "CHANGEZ-MOI" ]]; then
-
           curl --fail -X POST -H 'Content-Type: application/json' \
             --data "{\"alias\":\"strongmind\",
             \"emoji\":\":strongmind:\",
@@ -235,6 +234,7 @@ function verify_task_13() {
               return 1
             else
               echo "Verification passed"
+              rm -f /tmp/fin-challenge.json
               return 0
             fi
         else
