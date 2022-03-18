@@ -136,7 +136,7 @@ function verify_task_5() {
 }
 
 
-function verify_task_3() {
+function verify_task_6() {
  
   create=$(${kctl} auth can-i create pods --as=alterway --namespace=development)
   watch=$(${kctl} auth can-i watch pods --as=alterway --namespace=development)

@@ -79,8 +79,8 @@ start_progress () {
   ETCDCTL_API=3 etcdctl version
 
 
-  openssl genrsa -out /root/alterway-key.pem 2048
-  openssl req -new -key /root/alterway-key.pem -out /root/alterway-csr.pem -subj "/CN=alterway/O=DT"
+  openssl genrsa -out /root/alterway-key.pem 2048 2>/dev/null
+  openssl req -new -key /root/alterway-key.pem -out /root/alterway-csr.pem -subj "/CN=alterway/O=DT" 2>/dev/null
  
   sleep 30
   kubectl apply -f /opt/pv-1.yaml
