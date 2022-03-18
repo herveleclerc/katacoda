@@ -6,6 +6,11 @@
       "course_id": "cka-001",
       "title": "(cka-001) Premier Challenge",
       "description": "Effectuer et terminer toutes les actions demandées dans ce challenge"
+    },
+    {
+      "course_id": "cka-002",
+      "title": "(cka-002) Deuxième Challenge (WIP",
+      "description": "Effectuer et terminer toutes les actions demandées dans ce challenge"
     }
   ]
 }
