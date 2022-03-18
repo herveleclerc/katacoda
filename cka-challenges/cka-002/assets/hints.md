@@ -6,6 +6,8 @@ When authoring this collection of hints, mark each hint with the double pound (#
 
 ## Task 1, Hint 1
 
+N'oubliez pas export `ETCDCTL_API=3`
+
 `ETCDCTL_API=3 etcdctl version`
 
 ---

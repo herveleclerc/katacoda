@@ -17,16 +17,16 @@ function solve_task_1() {
 }
 
 function solve_task_2() {
-  ${kctl} apply -f /opt/elliphant.yaml
+  ${kctl} apply -f /opt/.logs/elliphant.yaml
 }
 
 function solve_task_3() {
- ${kctl} apply -f /opt/super-user-pod.yaml
+ ${kctl} apply -f /opt/.logs/super-user-pod.yaml
 }
 
 function solve_task_4() {
-   ${kctl} apply -f /opt/pvc-1.yaml
-   ${kctl} apply -f /opt/use-pv-good.yaml
+   ${kctl} apply -f /opt/.logs/pvc-1.yaml
+   ${kctl} apply -f /opt/.logs/use-pv-good.yaml
 }
 
 function solve_task_5() {
@@ -73,7 +73,7 @@ function solve_task_8() {
 
 
 function solve_task_9() {
-  ${kctl} apply -f /opt/orange-app-good.yaml
+  ${kctl} apply -f /opt/.logs/orange-app-good.yaml
 }
 
 function solve_task_10() {
@@ -87,7 +87,7 @@ function solve_task_11() {
 }
 
 function solve_task_12() { 
-   k apply -f /opt/pv-analytics.yaml
+   k apply -f /opt/.logs/pv-analytics.yaml
 }
 
 function solve_task_13() { 
