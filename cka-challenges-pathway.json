@@ -4,8 +4,8 @@
   "courses": [
     {
       "course_id": "cka-001",
-      "title": "(cka-001)Premier challenge",
-      "description": "Effectuer et terminer toutes les demandes"
+      "title": "(cka-001) Premier Challenge",
+      "description": "Effectuer et terminer toutes les actions demandées dans ce challenge"
     }
   ]
 }

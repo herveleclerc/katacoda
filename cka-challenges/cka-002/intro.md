@@ -5,10 +5,10 @@ Ces challenges vont vous permettre de préparer la certification CKA
 Plusieurs thématiques sont proposées pour ce challenge
 
 
-1. Les Pods
-2. Les Services
-3. Les requêtes sur les objets kubernetes
-4. Les volumes
+1. etcd (backup)
+2. Les limits et requests
+3. 
+4. 
 
 
 ---

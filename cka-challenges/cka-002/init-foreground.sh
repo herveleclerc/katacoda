@@ -72,11 +72,17 @@ start_progress () {
 
   # In shell context for student, so set any environment variables for learner here, if needed:
 
-  echo "Veuillez attendre que le challenge soit prêt.(30s)"
-  sleep 30
+  sudo apt-get install -y etcd-client
+  mkdir -p /data
+  ETCDCTL_API=3 etcdctl version
 
-  kubectl apply -f /root/orange-app.yaml
-  
+
+  openssl genrsa -out /root/alterway-key.pem 2048
+  openssl req -new -key /root/alterway-key.pem -out /root/alterway-csr.pem -subj "/CN=alterway/O=DT"
+ 
+  sleep 30
+  kubectl apply -f /opt/pv-1.yaml
+
 }
 
 clear && start_progress

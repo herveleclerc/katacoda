@@ -3,7 +3,7 @@
 
 Déployez un pod nommé `messaging` qui utilise l'image `redis:alpine` ayant pour label `tier=msg`
 
-- Name:  `nginx-pod` 
-- Image: `nginx:alpine` 
+- Name:  `messaging` 
+- Image: `redis:alpine` 
 - Label: `tier=msg`
 

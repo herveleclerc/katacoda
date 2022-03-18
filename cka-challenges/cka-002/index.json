@@ -1,6 +1,6 @@
 {
   "type": "challenge@0.8",
-  "title": "Challenge Préparation Certification CKA (cka-001)",
+  "title": "Challenge Préparation Certification CKA (cka-002)",
   "description": "Préparez votre certification CKA en réalisant plusieurs exercices",
   "difficulty": "intermediate",
   "time": "60 minutes",
@@ -16,73 +16,73 @@
     },
     "steps": [
       {
-        "title": "Pods",
+        "title": "etcd",
         "text": "task_1.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Toujours des Pods",
+        "title": "Limits et Requests",
         "text": "task_2.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Namespaces",
+        "title": "Super Pod",
         "text": "task_3.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Output",
+        "title": "Volumes (pv/pvc)",
         "text": "task_4.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Services",
+        "title": "Rolling Updates",
         "text": "task_5.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Déploiements",
+        "title": "Droits",
         "text": "task_6.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Pods Statiques",
+        "title": "Service et DNS",
         "text": "task_7.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Pods in namespaces",
+        "title": "A Finir",
         "text": "task_8.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Le début des problèmes",
+        "title": "A Finir",
         "text": "task_9.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Network",
+        "title": "A Finir",
         "text": "task_10.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Parseur JSONPATH",
+        "title": "A Finir",
         "text": "task_11.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "Volumes",
+        "title": "A Finir",
         "text": "task_12.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
@@ -100,10 +100,14 @@
         {"file": "hints.md", "target": "/opt"},
         {"file": "solutions.sh.enc", "target": "/opt"},
         {"file": "my-xargs.sh", "target": "/root", "chmod": "+x"},
-        {"file": "orange-app.yaml", "target": "/root"},
-        {"file": "orange-app-good.yaml", "target": "/opt"},
-        {"file": "pv-analytics.yaml", "target": "/opt"},
-        {"file": "fin-challenge.json", "target": "/tmp"}
+        {"file": "elliphant.yaml", "target": "/opt"},
+        {"file": "uper-user-pod.yaml", "target": "/opt"},
+        {"file": "use-pv.yaml", "target": "/root"},
+        {"file": "use-pv-good.yaml", "target": "/opt"},
+        {"file": "pv-1.yaml", "target": "/opt"},
+        {"file": "pvc-1.yaml", "target": "/opt"},
+        {"file": "alterway-user.yaml.tpl", "target": "/opt"}
+
       ]
     }
   },

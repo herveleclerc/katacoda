@@ -59,8 +59,10 @@ Parfait ! Vous avez fini Challenge n°1 de la certification CKA
 
 - kubectl patch svc hr-web-app-service --patch '{"spec": { "type": "NodePort", "ports": [ { "nodePort": 30082, "port": 8080, "protocol": "TCP", "targetPort": 8080 } ] } }'
 
+# 11 
 
 - kubectl get nodes -o jsonpath='{.items[*].status.nodeInfo.osImage}' > /tmp/osImage.txt
 
+# 12
 
 - kubectl apply -f /opt/pv-analytics.yaml
