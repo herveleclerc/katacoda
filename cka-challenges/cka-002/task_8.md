@@ -18,7 +18,7 @@ Affectez les `requests` et `limits` suivantes au pod :
 Vous devez écrire le manifeste du pod dans le fichier `/root/pod-over-request.yaml`
 
 
-Copiez la sortie résultant de la commande `kubectl apply -f /root/pod-over-request.yaml` dans le fichier /tmp/pod-over-request.txt
+Copiez la sortie résultant de la commande `kubectl apply -f /root/pod-over-request.yaml` dans le fichier `/tmp/pod-over-request.txt`
 
 Hint: la sortie doit commencer par `Error from server (Forbidden): error when creating "/root/pod-over-request.yaml": pods "cka-pod-1" is forbidden:` ...
 

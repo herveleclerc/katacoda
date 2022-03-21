@@ -10,6 +10,18 @@ Plusieurs thématiques sont proposées pour ce challenge
 3. Les requêtes sur les objets kubernetes
 4. Les volumes
 
+---
+
+**Attention** Soyez rigoureux avec : 
+
+- Les noms des resources  
+- Les namespaces  
+- Le fichiers et leur locations  
+
+Les check sont fait à partir de tous ce éléments  
+
+
+Ne perdez pas de temps, trouvez systèmatiquement la solutions la moins couteuse possible en terme de temps.  
 
 ---
 

@@ -82,7 +82,8 @@ start_progress () {
   openssl genrsa -out /root/alterway-key.pem 2048 2>/dev/null
   openssl req -new -key /root/alterway-key.pem -out /root/alterway-csr.pem -subj "/CN=alterway/O=DT" 2>/dev/null
  
-  sleep 30
+  sleep 60
+
   kubectl apply -f /opt/pv-1.yaml 2>/dev/null
   kubectl create secret generic supersecret -n kube-system --from-literal acopier=alterway2022 2>/dev/null
 

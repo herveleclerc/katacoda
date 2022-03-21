@@ -1,7 +1,7 @@
 
 ### RBAC / users
 
-Creéz un utilisateur nommé `alterway. Donnez lui les droits suivant au niveau cluster.
+Creéz un utilisateur nommé `alterway`. Donnez lui les droits suivant au niveau cluster.
 
 - create, list, get, update, delete sur les pods dans le namespace `development`
 - La cla privée et le csr sont disponible ici

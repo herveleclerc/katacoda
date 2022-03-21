@@ -6,7 +6,10 @@ Créez le namespace `healthchecking` et créez un pod nommé `cka-nginx-1` dans 
 Ce pod devra avoir une sonde de `liveness http` sur le port `80`, s'executant toutes les `5 secondes` avec un delais initial de `3 secondes`.
 
 Un fois le pod créé et en fonctionnement supprimez le fichier `/usr/share/nginx/html/index.html` à l'intérieur du pod.
-Copiez dans le fichier `/tmp/healthchecking.txt` la ligne montrant que la sonde est en échec (ligne avec le code d'erreur http)
+
+Copiez dans le fichier `/tmp/healthchecking.txt` le **Message** de ligne montrant que la sonde est en échec (ligne avec le code d'erreur http)
+
+Hint: Commence par `Liveness...`
 
 
 - Nom du pod : `cka-nginx-1`   

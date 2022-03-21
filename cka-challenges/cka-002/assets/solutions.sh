@@ -37,6 +37,8 @@ function solve_task_5() {
 
 function solve_task_6() {
 
+${kctl} create ns development
+
 cat <<EOF> alterway-user.yaml
 apiVersion: certificates.k8s.io/v1beta1
 kind: CertificateSigningRequest
@@ -137,6 +139,8 @@ EOF
 function solve_task_10() {
   ${kctl} label node node01 disk=ssd
 
+  ${kctl} create ns constraints
+
 cat <<EOF> /root/node-selector.yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -190,7 +194,7 @@ function solve_task_13() {
             \"emoji\":\":strongmind:\",
              \"text\":\"Challenge cka-002\",
             \"attachments\":[{\"title\":\"Réussite du Challenge cka-002 (katacoda)\",
-            \"title_link\":\"https://www.katacoda.com/awh/courses/cka-challenges/cka-001\",\"text\":\"$prenom $nom ($email) a réussi la certification\",\"color\":\"#764FA5\"}]}" \
+            \"title_link\":\"https://www.katacoda.com/awh/courses/cka-challenges/cka-002\",\"text\":\"$prenom $nom ($email) a réussi la certification\",\"color\":\"#764FA5\"}]}" \
    https://rocket.alterway.fr/hooks/QxnH7sqdQwLeby5vP/E5KwEWg88cT8RHrJJifYzdG5wfL5RPySPzKwMxZp$code
   else
     return 0
