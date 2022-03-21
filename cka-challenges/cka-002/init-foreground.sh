@@ -83,7 +83,13 @@ start_progress () {
   openssl req -new -key /root/alterway-key.pem -out /root/alterway-csr.pem -subj "/CN=alterway/O=DT" 2>/dev/null
  
   sleep 30
-  kubectl apply -f /opt/pv-1.yaml
+  kubectl apply -f /opt/pv-1.yaml 2>/dev/null
+  kubectl create secret generic supersecret -n kube-system --from-literal acopier=alterway2022 2>/dev/null
+
+  kubectl get secret supersecret -n kube-system -o jsonpath='{.data.acopier}' | base64 --decode > /opt/.logs/supersecret.txt
+
+  kubectl create ns app002 2>/dev/null
+  kubectl run myapp002 -n app002 --image=paulbouwer/hello-kubernetes:1 --env=MESSAGE=BONJOURBONJOUR 2>/dev/null
 
 }
 

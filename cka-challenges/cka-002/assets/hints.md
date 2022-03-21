@@ -54,13 +54,22 @@ Le fichier `/tmp/test-nslookup-service.txt` de check n'existe pas
 ---
 ## Task 8, Hint 1
 
-N'oubliez pas le namespace
+Le yaml n'est pas correct certainement 
 
+
+## Task 8, Hint 2
+
+Le fichier `/tmp/pod-over-request.txt` de check n'existe pas
 
 ---
 ## Task 9, Hint 1
 
-Il ya un typo quelque part
+Avez vous bien supprimer le bon fichier ?
+
+
+## Task 9, Hint 2
+
+le fichier /tmp/healthchecking.txt n'existe pas
 
 ---
 ## Task 10, Hint 1
@@ -71,9 +80,22 @@ Bien faire la différence entre les types de services
 ---
 ## Task 11, Hint 1
 
-N'oubliez pas le flag dans la commande
+N'oubliez pas de décoder le mot de passe du secret.
+
+## Task 11, Hint 2
+
+Le fichier /tmp/supersecret.txt n'exsite pas
 
 ---
 ## Task 12, Hint 1
 
-Vérifiez bien les arguments
+Regarder la page web c'est affiché en grand.
+
+## Task 12, Hint 2
+
+Le fichier /tmp/mystery.txt n'existe pas 
+
+---
+## Task 13, Hint 1
+
+Allé un dernier effort !

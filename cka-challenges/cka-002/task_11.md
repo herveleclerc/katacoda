@@ -1,10 +1,11 @@
 
-### A FINIR
+### Pas si secret que ca
 
-Utilisez le parseur intégré JSON PATH pour retouver les `osImage` de tous les noeuds 
+Trouvez dans le cluster un secret nommé `supersecret`
+Mettre la valeur decodée de la clé `acopier` du secret `supersecret` dans le fichier `/tmp/supersecret.txt`
 
-Hint: `osImage` est accessible la section `nodeInfo` qui se trouve sous la section `status`
 
-- Format:  `txt`  
-- Répertoire : `/tmp`
-- Fichier:  `osImage.txt`
+- Namespace: ?
+- Nom du secret: `supersecret`
+- Clé: `acopier`
+- Nom du fichier: `/tmp/supersecret.txt`

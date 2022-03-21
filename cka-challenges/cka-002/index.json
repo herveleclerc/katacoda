@@ -3,7 +3,7 @@
   "title": "Challenge Préparation Certification CKA (cka-002)",
   "description": "Préparez votre certification CKA en réalisant plusieurs exercices",
   "difficulty": "intermediate",
-  "time": "60 minutes",
+  "time": "120 minutes",
   "details": {
     "intro": {
       "text": "intro.md",
@@ -58,25 +58,25 @@
         "hint": "hint.sh"
       },
       {
-        "title": "A Finir",
+        "title": "Quota",
         "text": "task_8.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "A Finir",
+        "title": "Staying Alive",
         "text": "task_9.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "A Finir",
+        "title": "Bien Placé",
         "text": "task_10.md",
         "verify": "verify.sh",
         "hint": "hint.sh"
       },
       {
-        "title": "A Finir",
+        "title": "Secrets",
         "text": "task_11.md",
         "verify": "verify.sh",
         "hint": "hint.sh"

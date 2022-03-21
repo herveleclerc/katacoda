@@ -67,41 +67,129 @@ function solve_task_7() {
 }
 
 function solve_task_8() {
-  ${kctl} create namespace finance
-  ${kctl} run temp-bus -n finance --image=redis:alpine
+  ${kctl} create namespace cka-ressources
+
+cat <<EOF> /root/resource-quota.yaml
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: resource-quota
+  namespace: cka-ressources
+spec:
+  hard:
+    requests.memory: 1Gi
+    limits.memory: 2Gi
+EOF
+
+  ${kctl}  apply -f /root/resource-quota.yaml
+
+cat <<EOF> /root/pod-over-request.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cka-pod-1
+  namespace: cka-ressources
+spec:
+  containers:
+  - name: cka-pod-1
+    image: redis:alpine
+    resources:
+      requests:
+        memory: "1.5G"
+        cpu: "250m"
+      limits:
+        memory: "2G"
+EOF
+
+  ${kctl} apply -f /root/pod-over-request.yaml
+
+  echo 'Error from server (Forbidden): error when creating "/root/pod-over-request.yaml": pods "cka-pod-1" is forbidden: exceeded quota: resource-quota, requested: requests.memory=1500M, used: requests.memory=0, limited: requests.memory=1Gi' > /tmp/pod-over-request.txt
 }
 
 
 function solve_task_9() {
-  ${kctl} apply -f /opt/.logs/orange-app-good.yaml
+  ${kctl} create ns healthchecking
+
+cat <<EOF> /root/probe-http.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cka-nginx-1
+  namespace: healthchecking
+spec:
+  containers:
+  - name: liveness
+    image: nginx
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 80
+      initialDelaySeconds: 3
+      periodSeconds: 5
+EOF
+
+  ${kctl} apply -f /root/probe-http.yaml
+  ${kctl} exec -n healthchecking cka-nginx-1 -- rm /usr/share/nginx/html/index.html
+
+  echo "Liveness probe failed: HTTP probe failed with statuscode: 403" > /tmp/healthchecking.txt
 }
 
 function solve_task_10() {
+  ${kctl} label node node01 disk=ssd
 
-  ${kctl} expose deploy hr-web-app --name hr-web-app-service --port 8080  --type NodePort --target-port 8080 
-  ${kctl} patch svc hr-web-app-service --patch '{"spec": { "type": "NodePort", "ports": [ { "nodePort": 30082, "port": 8080, "protocol": "TCP", "targetPort": 8080 } ] } }'
+cat <<EOF> /root/node-selector.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: app001
+  name: app001
+  namespace: constraints
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app001
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: app001
+    spec:
+      containers:
+      - image: nginx:alpine
+        name: nginx
+        resources: {}
+      nodeSelector:
+       disk: ssd
+EOF
+
+ ${kctl} apply -f /root/node-selector.yaml
+
 }
 
 function solve_task_11() {
-  ${kctl} get nodes -o jsonpath='{.items[*].status.nodeInfo.osImage}' > /tmp/osImage.txt
+  ${kctl} get secret supersecret -n kube-system -o jsonpath='{.data.acopier}' | base64 --decode > /tmp/supersecret.txt
 }
 
 function solve_task_12() { 
-   k apply -f /opt/.logs/pv-analytics.yaml
+   ${kctl} port-forward -n app002 myapp002 8080:8080 &
+   echo "BONJOURBONJOUR" > /tmp/mystery.txt
 }
 
 function solve_task_13() { 
   if [ -f "/tmp/fin-challenge.json" ]; then
-     prenom="Hervé"
-     nom="Leclerc"
+     prenom=$(cat < "/tmp/fin-challenge.json" | jq -r '.prenom')
+     nom=$(cat < "/tmp/fin-challenge.json" | jq -r '.nom')
      code=$(cat < "/tmp/fin-challenge.json" | jq -r '.code')
      email=$(cat < "/tmp/fin-challenge.json" | jq -r '.email')
 
   curl -X POST -H 'Content-Type: application/json' \
    --data "{\"alias\":\"strongmind\",
             \"emoji\":\":strongmind:\",
-             \"text\":\"Challenge cka-001\",
-            \"attachments\":[{\"title\":\"Réussite du Challenge cka-001 (katacoda)\",
+             \"text\":\"Challenge cka-002\",
+            \"attachments\":[{\"title\":\"Réussite du Challenge cka-002 (katacoda)\",
             \"title_link\":\"https://www.katacoda.com/awh/courses/cka-challenges/cka-001\",\"text\":\"$prenom $nom ($email) a réussi la certification\",\"color\":\"#764FA5\"}]}" \
    https://rocket.alterway.fr/hooks/QxnH7sqdQwLeby5vP/E5KwEWg88cT8RHrJJifYzdG5wfL5RPySPzKwMxZp$code
   else

@@ -183,10 +183,16 @@ function verify_task_7() {
 }
 
 function verify_task_8() {
+
+  if [[ ! -f "/tmp/pod-over-request.txt" ]]
+  then
+    echo "Verification failed"
+    return 2
+  fi
  
-  content=$(${kctl} get pods --no-headers -n finance --selector run=temp-bus  | grep temp-bus | awk '{print $3;}')
+  c=$(grep -c "requested:.*requests.memory=1500M,.*used:.*requests.memory=0,.*limited:.*requests.memory=1Gi" /tmp/pod-over-request.txt)
   
-  if [[ "$content" == "Running" ]]
+  if [[ "$c" == "1" ]]
   then
     echo "Verification passed"
     return 0
@@ -198,9 +204,15 @@ function verify_task_8() {
 
 function verify_task_9() {
  
-  content=$(${kctl} get pods --no-headers -n default --selector run=orange | grep orange | awk '{print $3;}')
+ if [[ ! -f "/tmp/healthchecking.txt" ]]
+  then
+    echo "Verification failed"
+    return 2
+  fi
+ 
+  c=$(grep -c "Liveness.*probe.*failed:.*HTTP.*probe.*failed.*with.*statuscode:.*403" /tmp/healthchecking.txt)
   
-  if [[ "$content" == "Running" ]]
+  if [[ "$c" == "1" ]]
   then
     echo "Verification passed"
     return 0
@@ -208,15 +220,16 @@ function verify_task_9() {
     echo "Verification failed"
     return 1
   fi
+  
 }
 
 function verify_task_10() {
+
+
+  c=$(${kctl} get po -n constraints -o wide | grep app001 | grep -c node01)
  
-  curl -s -o /dev/null localhost:30082
-
-  retVal=$?
-
-if [ $retVal -ne 0 ]
+  
+  if [ $c -ne 2 ]
   then
     echo "Verification failed"
     return 1
@@ -228,43 +241,42 @@ if [ $retVal -ne 0 ]
 
 function verify_task_11() {
  
-  content=$(${kctl} get nodes -o jsonpath='{.items[*].status.nodeInfo.osImage}')
-
-  if [ -f "/tmp/osImage.txt" ]; then
-    osImage=$(cat < "/tmp/osImage.txt")
-  else 
+  if [[ ! -f "/tmp/supersecret.txt" ]]
+  then
+    echo "Verification failed"
     return 2
   fi
-  
-  if [[ "$content" == "$osImage" ]]
+
+
+  diff '/opt/.logs/supersecret.txt' '/tmp/supersecret.txt'
+  if [[ $? -ne 0 ]]
   then
-    echo "Verification passed"
-    return 0
-  else
     echo "Verification failed"
     return 1
+  else
+    echo "Verification passed"
+    return 0
   fi
 }
 
 function verify_task_12() {
  
-  content=$(${kctl} get pv --no-headers | grep pv-analytics | awk '{print $1" "$2" "$3" "$5;}')
-  path=$(${kctl} get -o jsonpath='{.spec.hostPath.path}' pv pv-analytics)
-
-  if [[ "$content" == "pv-analytics 100Mi RWX Available" ]]
+  if [[ ! -f "/tmp/mystery.txt" ]]
   then
-    if [[ "$path" == "/pv/data-analytics" ]]
-    then
-      echo "Verification passed"
-      return 0
-    else
-      echo "Verification failed"
-      return 1
-    fi
-  else
+    echo "Verification failed"
+    return 2
+  fi
+
+  c=$(grep -c BONJOURBONJOUR '/tmp/mystery.txt')
+  if [[ $c -ne 1 ]]
+  then
     echo "Verification failed"
     return 1
+  else
+    echo "Verification passed"
+    return 0
   fi
+  
 }
 
 function verify_task_13() {

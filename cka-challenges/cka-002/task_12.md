@@ -1,11 +1,12 @@
 
-### A FINIR
+### Mystère 
 
+Dans le namespace `app002` qu'affiche le pod `myapp002` comme message de bienvenue ?
 
-Créez un `Persistent Volume` nommé `pv-analytics` qui contiendra `100Mi` de `stockage` dont l'acces sera en `ReadWriteMany`
+Hint: div id = message
 
+- Port: 8080
+- Namespace : app002
+- Pod: myapp002
 
-- Nom du pv:  `pv-analytics`  
-- Mode d'accès : `ReadWriteMany`
-- Stockage:  `100Mi`
-- Driver: HostPath sur `/pv/data-analytics`
+Ecrire un fichier `/tmp/mystery.txt` avec juste le message de bienvenue.

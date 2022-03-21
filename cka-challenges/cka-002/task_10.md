@@ -1,11 +1,13 @@
 
-### A FINIR
+### Contraintes de placement
 
-Exposer l'application nommé `hr-web-app`  sur le port `30082` au niveau des noeuds. L'application écoute sur port `8080`.
+Posez le label `disk=ssd` sur le noeud `node01` 
 
-- Nom de l'application :  `hr-web-app`
-- Nom du service :  `hr-web-app-service` 
-- Pod : `messaging`
-- Port:  `30082`
-- Type: `NodePort`
-- Port applicaion: `8080`
+Créez un déploiement nommé `app001` dans le namespace `constraints` avec le conteneur suivant `nginx:alpine` avec 2 réplicas.
+
+Faites en sorte que les pods soient placés sur le noeud  `node01`
+
+- Nom de l'application :  `app001`
+- Namespace :  `constraints` 
+- Pod : `app`
+
