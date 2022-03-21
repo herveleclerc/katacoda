@@ -38,4 +38,4 @@ Pour rappel
 - [Documentation k8s](https://kubernetes.io/docs/home/)
 - [Cheat Sheet k8s](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
-Ce Challenge se termine automatiquement 120 minutes. 🍀 **Good luck!** 🍀
+Ce Challenge se termine automatiquement 60 minutes. 🍀 **Good luck!** 🍀

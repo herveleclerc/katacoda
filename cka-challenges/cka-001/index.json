@@ -3,7 +3,7 @@
   "title": "Challenge Préparation Certification CKA (cka-001)",
   "description": "Préparez votre certification CKA en réalisant plusieurs exercices",
   "difficulty": "intermediate",
-  "time": "120 minutes",
+  "time": "60 minutes",
   "details": {
     "intro": {
       "text": "intro.md",
