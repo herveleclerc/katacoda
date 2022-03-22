@@ -107,8 +107,8 @@
         {"file": "pv-1.yaml", "target": "/opt/.logs"},
         {"file": "pvc-1.yaml", "target": "/opt/.logs"},
         {"file": "alterway-user.yaml.tpl", "target": "/opt/.logs"},
-        {"file": "fin-challenge.json", "target": "/tmp"}
-
+        {"file": "fin-challenge.json", "target": "/tmp"},
+        {"file": "giveup", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
   },

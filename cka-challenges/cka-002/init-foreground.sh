@@ -78,13 +78,13 @@ start_progress () {
   mkdir -p /data
   ETCDCTL_API=3 etcdctl version
 
-
   openssl genrsa -out /root/alterway-key.pem 2048 2>/dev/null
   openssl req -new -key /root/alterway-key.pem -out /root/alterway-csr.pem -subj "/CN=alterway/O=DT" 2>/dev/null
  
-  sleep 60
+   echo "Veuillez attendre que le challenge soit prêt.(30s)"
+   sleep 30
 
-  kubectl apply -f /opt/pv-1.yaml 2>/dev/null
+  kubectl apply -f /opt/.logs/pv-1.yaml 2>/dev/null
   kubectl create secret generic supersecret -n kube-system --from-literal acopier=alterway2022 2>/dev/null
 
   kubectl get secret supersecret -n kube-system -o jsonpath='{.data.acopier}' | base64 --decode > /opt/.logs/supersecret.txt
