@@ -62,11 +62,11 @@ function solve_task_12() {
 }
 
 function solve_task_13() { 
-  if [ -f "/tmp/fin-challenge.json" ]; then
+  if [ -f "/root/fin-challenge.json" ]; then
      prenom="Hervé"
      nom="Leclerc"
-     code=$(cat < "/tmp/fin-challenge.json" | jq -r '.code')
-     email=$(cat < "/tmp/fin-challenge.json" | jq -r '.email')
+     code=$(cat < "/root/fin-challenge.json" | jq -r '.code')
+     email=$(cat < "/root/fin-challenge.json" | jq -r '.email')
 
   curl -X POST -H 'Content-Type: application/json' \
    --data "{\"alias\":\"strongmind\",

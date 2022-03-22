@@ -103,7 +103,7 @@
         {"file": "orange-app.yaml", "target": "/root"},
         {"file": "orange-app-good.yaml", "target": "/opt"},
         {"file": "pv-analytics.yaml", "target": "/opt"},
-        {"file": "fin-challenge.json", "target": "/tmp"}
+        {"file": "fin-challenge.json", "target": "/root"}
       ]
     }
   },

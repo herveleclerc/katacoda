@@ -209,11 +209,11 @@ function verify_task_12() {
 }
 
 function verify_task_13() {
-  if [ -f "/tmp/fin-challenge.json" ]; then
-     prenom=$(cat < "/tmp/fin-challenge.json" | jq -r '.prenom')
-     nom=$(cat < "/tmp/fin-challenge.json" | jq -r '.nom')
-     email=$(cat < "/tmp/fin-challenge.json" | jq -r '.email')
-     code=$(cat < "/tmp/fin-challenge.json" | jq -r '.code')
+  if [ -f "/root/fin-challenge.json" ]; then
+     prenom=$(cat < "/root/fin-challenge.json" | jq -r '.prenom')
+     nom=$(cat < "/root/fin-challenge.json" | jq -r '.nom')
+     email=$(cat < "/root/fin-challenge.json" | jq -r '.email')
+     code=$(cat < "/root/fin-challenge.json" | jq -r '.code')
      if [[ -z "$prenom" ]]  ||  [[ -z "$nom" ]] || [[ -z "$code" ]] || [[ -z "$email" ]]
      then
        echo "Verification failed"
@@ -234,7 +234,7 @@ function verify_task_13() {
               return 1
             else
               echo "Verification passed"
-              rm -f /tmp/fin-challenge.json
+              rm -f /root/fin-challenge.json
               return 0
             fi
         else
