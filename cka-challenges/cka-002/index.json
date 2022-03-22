@@ -82,7 +82,7 @@
         "hint": "hint.sh"
       },
       {
-        "title": "A Finir",
+        "title": "Message mysterieux",
         "text": "task_12.md",
         "verify": "verify.sh",
         "hint": "hint.sh"

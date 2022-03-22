@@ -70,11 +70,12 @@ start_progress () {
   # Pick up any changes during background
   source ~/.bashrc
 
-  mkdir -p /opt/.logs
 
   # In shell context for student, so set any environment variables for learner here, if needed:
 
-  sudo apt-get install -y etcd-client
+  export ETCDCTL_API=3
+
+  mkdir -p /opt/.logs
   mkdir -p /data
   ETCDCTL_API=3 etcdctl version
 

@@ -24,7 +24,7 @@ Hint: la sortie doit commencer par `Error from server (Forbidden): error when cr
 
 
 - Nom du quota: `cka-ressources`
-- Nom du pod : `ficka-pod-1`     
+- Nom du pod : `cka-pod-1`     
 - Namespace: `cka-ressources`   
 
 

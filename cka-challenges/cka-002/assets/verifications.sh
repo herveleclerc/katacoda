@@ -19,7 +19,7 @@ export ectl="etcdctl --endpoints=https://$(hostname -i | awk '{print $2;}'):2379
 
 
 function write_progress() {
-  echo -n "$1" >> /opt/.logs/progress.txt
+  echo "$1" >> /opt/.logs/progress.txt
   return 0
 }
 
@@ -34,7 +34,7 @@ function check_give_up() {
 
 function verify_task_1() {
 
-  check_give_up 1; ec=$?
+  check_give_up 1; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -45,7 +45,7 @@ function verify_task_1() {
     if [[ "$content" == "1" ]]
     then
       echo "Verification passed"
-       write_progress "Task 1: OK;"
+      write_progress "Task 1: OK;"
       return 0
     else
       echo "Verification failed"
@@ -59,7 +59,7 @@ function verify_task_1() {
 
 function verify_task_2() {
 
-  check_give_up 2; ec=$?
+  check_give_up 2; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -94,7 +94,7 @@ function verify_task_2() {
 
 function verify_task_3() {
 
-  check_give_up 3; ec=$?
+  check_give_up 3; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -122,7 +122,7 @@ function verify_task_3() {
 
 function verify_task_4() {
 
-  check_give_up 4; ec=$?
+  check_give_up 4; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -156,7 +156,7 @@ function verify_task_4() {
 
 function verify_task_5() {
 
-  check_give_up 5; ec=$?
+  check_give_up 5; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -186,7 +186,7 @@ function verify_task_5() {
 
 function verify_task_6() {
 
-  check_give_up 6; ec=$?
+  check_give_up 6; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -214,7 +214,7 @@ function verify_task_6() {
 
 function verify_task_7() {
 
-  check_give_up 7; ec=$?
+  check_give_up 7; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -244,7 +244,7 @@ function verify_task_7() {
 
 function verify_task_8() {
 
-  check_give_up 8; ec=$?
+  check_give_up 8; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -270,7 +270,7 @@ function verify_task_8() {
 
 function verify_task_9() {
 
-  check_give_up 9; ec=$?
+  check_give_up 9; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -283,7 +283,7 @@ function verify_task_9() {
  
   c=$(grep -c "Liveness.*probe.*failed:.*HTTP.*probe.*failed.*with.*statuscode:.*403" /tmp/healthchecking.txt)
   
-  if [[ "$c" == "1" ]]
+  if [[ $c -eq 1 ]]
   then
     echo "Verification passed"
     write_progress "Task 9: OK;"
@@ -297,7 +297,7 @@ function verify_task_9() {
 
 function verify_task_10() {
 
-  check_give_up 10; ec=$?
+  check_give_up 10; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -318,7 +318,7 @@ function verify_task_10() {
 
 function verify_task_11() {
 
-  check_give_up 11; ec=$?
+  check_give_up 11; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -344,7 +344,7 @@ function verify_task_11() {
 
 function verify_task_12() {
 
-  check_give_up 12; ec=$?
+  check_give_up 12; local ec=$?
   if [[ $ec -eq 1 ]]; then
     return 0
   fi
@@ -386,7 +386,7 @@ function verify_task_13() {
              titre="Réussite partielle Challenge cka-002 (katacoda)"
              text="$prenom $nom ($email) a réussi partiellement la certification"
           else
-             titre="Réussite du Challenge cka-002 (katacoda)"
+             title="Réussite du Challenge cka-002 (katacoda)"
              text="$prenom $nom ($email) a réussi la certification"
           fi
        else
